@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:core="http://www.omg.org/spec/20130218/core"
+    xmlns:description="http://www.eclipse.org/sirius/description/1.1.0"
+    xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0"
+    xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0">
+  <viewpoint:DAnalysis uid="_TKA_AIRD" selectedViews="_TKA_VIEW" version="15.2.0.202303281325">
+    <semanticResources>toko-online-anime.uml</semanticResources>
+    <semanticResources>main.core</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_TKA_VIEW">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML_Core']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_TKA_RD_MAIN" name="main" repPath="#_TKA_DG_MAIN">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML_Core']/@ownedRepresentations[name='IFMLDiagram']"/>
+        <target xmi:type="core:IFMLModel" href="main.core#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>

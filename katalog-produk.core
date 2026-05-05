@@ -94,11 +94,11 @@
           </viewElementEvents>
           <viewComponentParts xsi:type="ext:SimpleField" id="_TKA_KP_ADD_f1" name="Nama">
             <annotations text="Required"/>
-            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_KP_ADD_f1s" name="nama" defaultValue=""/>
+            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_KP_ADD_f1s" name="nama"/>
           </viewComponentParts>
           <viewComponentParts xsi:type="ext:SimpleField" id="_TKA_KP_ADD_f2" name="Harga">
             <annotations text="Required"/>
-            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_KP_ADD_f2s" name="harga" defaultValue="0"/>
+            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_KP_ADD_f2s" name="harga"/>
           </viewComponentParts>
           <viewComponentParts xsi:type="ext:SimpleField" id="_TKA_KP_ADD_f3" name="Kategori">
             <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_KP_ADD_f3s" name="kategori"/>

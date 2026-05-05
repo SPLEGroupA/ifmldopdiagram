@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="ASCII"?>
+<core:IFMLModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://www.omg.org/spec/20130218/core" xmlns:dop-extension="http://amanah.cs.ui.ac.id/ifml/dop" xmlns:ext="http://www.omg.org/spec/20130218/ext" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" id="_TKA_MN_0">
+  <interactionFlowModel id="_TKA_MN_1">
+    <interactionFlowModelElements xsi:type="core:ViewContainer" id="_TKA_MN_HOME" name="Home" isXOR="true">
+      <annotations text="/"/>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="ext:IFMLMenu" id="_TKA_MN_MKP" name="KatalogProduk">
+      <annotations text="KatalogProduk"/>
+      <viewElementEvents id="_TKA_MN_MKP_ev" name="KatalogProduk">
+        <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_MN_MKP_nf">
+          <targetInteractionFlowElement xsi:type="core:ViewContainer" href="katalog-produk.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
+        </outInteractionFlows>
+      </viewElementEvents>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="ext:IFMLMenu" id="_TKA_MN_MKB" name="KeranjangBelanja">
+      <annotations text="KeranjangBelanja"/>
+      <viewElementEvents id="_TKA_MN_MKB_ev" name="KeranjangBelanja">
+        <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_MN_MKB_nf">
+          <targetInteractionFlowElement xsi:type="core:ViewContainer" href="keranjang-belanja.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
+        </outInteractionFlows>
+      </viewElementEvents>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="ext:IFMLMenu" id="_TKA_MN_MAP" name="AkunPengguna">
+      <annotations text="AkunPengguna"/>
+      <viewElementEvents id="_TKA_MN_MAP_ev" name="AkunPengguna">
+        <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_MN_MAP_nf">
+          <targetInteractionFlowElement xsi:type="core:ViewContainer" href="akun-pengguna.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
+        </outInteractionFlows>
+      </viewElementEvents>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="ext:IFMLMenu" id="_TKA_MN_MPY" name="Pembayaran">
+      <annotations text="Pembayaran"/>
+      <viewElementEvents id="_TKA_MN_MPY_ev" name="Pembayaran">
+        <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_MN_MPY_nf">
+          <targetInteractionFlowElement xsi:type="core:ViewContainer" href="pembayaran.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
+        </outInteractionFlows>
+      </viewElementEvents>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="ext:IFMLMenu" id="_TKA_MN_MPS" name="ManajemenPesanan">
+      <annotations text="ManajemenPesanan"/>
+      <viewElementEvents id="_TKA_MN_MPS_ev" name="ManajemenPesanan">
+        <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_MN_MPS_nf">
+          <targetInteractionFlowElement xsi:type="core:ViewContainer" href="manajemen-pesanan.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
+        </outInteractionFlows>
+      </viewElementEvents>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="ext:IFMLMenu" id="_TKA_MN_MPO" name="PreOrder">
+      <annotations text="PreOrder"/>
+      <viewElementEvents id="_TKA_MN_MPO_ev" name="PreOrder">
+        <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_MN_MPO_nf">
+          <targetInteractionFlowElement xsi:type="core:ViewContainer" href="pre-order.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
+        </outInteractionFlows>
+      </viewElementEvents>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="ext:IFMLMenu" id="_TKA_MN_DKPE" name="ProdukEksklusif">
+      <annotations text="ProdukEksklusif"/>
+      <viewElementEvents id="_TKA_MN_DKPE_ev" name="ProdukEksklusif">
+        <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_MN_DKPE_nf">
+          <targetInteractionFlowElement xsi:type="dop-extension:ModifiedViewContainer" href="katalog-produk-eksklusif.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
+        </outInteractionFlows>
+      </viewElementEvents>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="ext:IFMLMenu" id="_TKA_MN_DKPP" name="ProdukPreOwned">
+      <annotations text="ProdukPreOwned"/>
+      <viewElementEvents id="_TKA_MN_DKPP_ev" name="ProdukPreOwned">
+        <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_MN_DKPP_nf">
+          <targetInteractionFlowElement xsi:type="dop-extension:ModifiedViewContainer" href="katalog-produk-pre-owned.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
+        </outInteractionFlows>
+      </viewElementEvents>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="ext:IFMLMenu" id="_TKA_MN_DPE" name="PembayaranEWallet">
+      <annotations text="PembayaranEWallet"/>
+      <viewElementEvents id="_TKA_MN_DPE_ev" name="PembayaranEWallet">
+        <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_MN_DPE_nf">
+          <targetInteractionFlowElement xsi:type="dop-extension:ModifiedViewContainer" href="pembayaran-ewallet.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
+        </outInteractionFlows>
+      </viewElementEvents>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="ext:IFMLMenu" id="_TKA_MN_DWL" name="Wishlist">
+      <annotations text="Wishlist"/>
+      <viewElementEvents id="_TKA_MN_DWL_ev" name="Wishlist">
+        <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_MN_DWL_nf">
+          <targetInteractionFlowElement xsi:type="dop-extension:ModifiedViewContainer" href="wishlist.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
+        </outInteractionFlows>
+      </viewElementEvents>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="ext:IFMLMenu" id="_TKA_MN_DRR" name="ReviewRating">
+      <annotations text="ReviewRating"/>
+      <viewElementEvents id="_TKA_MN_DRR_ev" name="ReviewRating">
+        <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_MN_DRR_nf">
+          <targetInteractionFlowElement xsi:type="dop-extension:ModifiedViewContainer" href="review-rating.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
+        </outInteractionFlows>
+      </viewElementEvents>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="ext:IFMLMenu" id="_TKA_MN_DSM" name="Membership">
+      <annotations text="Membership"/>
+      <viewElementEvents id="_TKA_MN_DSM_ev" name="Membership">
+        <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_MN_DSM_nf">
+          <targetInteractionFlowElement xsi:type="dop-extension:ModifiedViewContainer" href="sistem-membership.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
+        </outInteractionFlows>
+      </viewElementEvents>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="ext:IFMLMenu" id="_TKA_MN_DSPL" name="PoinLoyalitas">
+      <annotations text="PoinLoyalitas"/>
+      <viewElementEvents id="_TKA_MN_DSPL_ev" name="PoinLoyalitas">
+        <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_MN_DSPL_nf">
+          <targetInteractionFlowElement xsi:type="dop-extension:ModifiedViewContainer" href="sistem-poin-loyalitas.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
+        </outInteractionFlows>
+      </viewElementEvents>
+    </interactionFlowModelElements>
+  </interactionFlowModel>
+  <domainModel id="_TKA_MN_DM">
+    <domainElements xsi:type="core:UMLDomainConcept" id="_TKA_MN_DM_PRD" name="ProdukImpl">
+      <classifier xsi:type="uml:Class" href="toko-online-anime.uml#_TOA_M_PRD"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MN_DM_PRDa1" name="id_produk">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_PRD_a1"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MN_DM_PRDa2" name="nama">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_PRD_a2"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MN_DM_PRDa3" name="harga">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_PRD_a3"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MN_DM_PRDa4" name="kategori">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_PRD_a4"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MN_DM_PRDa5" name="deskripsi">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_PRD_a5"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MN_DM_PRDa6" name="stok">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_PRD_a6"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MN_DM_PRDa7" name="gambar_url">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_PRD_a7"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLDomainConcept" id="_TKA_MN_DM_KRJ" name="KeranjangBelanjaImpl">
+      <classifier xsi:type="uml:Class" href="toko-online-anime.uml#_TOA_M_KRJ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MN_DM_KRJa1" name="id_keranjang">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_KRJ_a1"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLDomainConcept" id="_TKA_MN_DM_CI" name="CartItemImpl">
+      <classifier xsi:type="uml:Class" href="toko-online-anime.uml#_TOA_M_CI"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MN_DM_CIa1" name="id_cart_item">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_CI_a1"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MN_DM_CIa2" name="quantity">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_CI_a2"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MN_DM_CIa3" name="harga_satuan">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_CI_a3"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLDomainConcept" id="_TKA_MN_DM_AKN" name="AkunPenggunaImpl">
+      <classifier xsi:type="uml:Class" href="toko-online-anime.uml#_TOA_M_AKN"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MN_DM_AKNa1" name="id_akun">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_AKN_a1"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MN_DM_AKNa2" name="email">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_AKN_a2"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MN_DM_AKNa3" name="nama">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_AKN_a3"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MN_DM_AKNa5" name="alamat">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_AKN_a5"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MN_DM_AKNa6" name="no_telepon">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_AKN_a6"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLDomainConcept" id="_TKA_MN_DM_PAY" name="PembayaranImpl">
+      <classifier xsi:type="uml:Class" href="toko-online-anime.uml#_TOA_M_PAY"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MN_DM_PAYa1" name="id_pembayaran">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_PAY_a1"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MN_DM_PAYa2" name="metode">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_PAY_a2"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MN_DM_PAYa3" name="jumlah">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_PAY_a3"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MN_DM_PAYa4" name="status">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_PAY_a4"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MN_DM_PAYa5" name="id_pesanan">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_PAY_a5"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLDomainConcept" id="_TKA_MN_DM_PSN" name="OrderImpl">
+      <classifier xsi:type="uml:Class" href="toko-online-anime.uml#_TOA_M_PSN"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MN_DM_PSNa1" name="id_pesanan">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_PSN_a1"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MN_DM_PSNa2" name="status">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_PSN_a2"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MN_DM_PSNa3" name="tanggal_pesan">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_PSN_a3"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MN_DM_PSNa4" name="total_harga">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_PSN_a4"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLDomainConcept" id="_TKA_MN_DM_OI" name="OrderItemImpl">
+      <classifier xsi:type="uml:Class" href="toko-online-anime.uml#_TOA_M_OI"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MN_DM_OIa1" name="id_order_item">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_OI_a1"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MN_DM_OIa2" name="quantity">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_OI_a2"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MN_DM_OIa3" name="harga_satuan">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_OI_a3"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLDomainConcept" id="_TKA_MN_DM_PO" name="PreOrderImpl">
+      <classifier xsi:type="uml:Class" href="toko-online-anime.uml#_TOA_M_PO"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MN_DM_POa1" name="id_preorder">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_PO_a1"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MN_DM_POa2" name="tanggal_rilis">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_PO_a2"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MN_DM_POa3" name="status">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_PO_a3"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MN_DM_DKPEa" name="is_eksklusif">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_DE01_a1"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MN_DM_DKPPa" name="kondisi">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_DE02_a1"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MN_DM_DPEa" name="ewallet_provider">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_DE03_a1"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MN_DM_DRRa" name="average_rating">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_DE05_a1"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MN_DM_DSMa" name="membership_level">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_DE06_a1"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MN_DM_DSPLa" name="poin">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_DE07_a1"/>
+    </domainElements>
+  </domainModel>
+</core:IFMLModel>

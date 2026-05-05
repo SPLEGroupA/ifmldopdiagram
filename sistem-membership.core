@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ASCII"?>
+<core:IFMLModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://www.omg.org/spec/20130218/core" xmlns:dop-extension="http://amanah.cs.ui.ac.id/ifml/dop" xmlns:ext="http://www.omg.org/spec/20130218/ext" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" id="_TKA_DE_SM_0">
+  <interactionFlowModel id="_TKA_DE_SM_1">
+    <interactionFlowModelElements xsi:type="dop-extension:DeltaModuleDefinition" id="_TKA_DE_SM_MOD" name="SistemMembership">
+      <interactionFlowModelElement xsi:type="dop-extension:ModifiedViewContainer" id="_TKA_DE_SM_TBL" name="Table Akun With Membership Page">
+        <annotations text="/akun-membership"/>
+        <inInteractionFlows xsi:type="core:NavigationFlow" href="main.core#//@interactionFlowModel/@interactionFlowModelElements.12/@viewElementEvents.0/@outInteractionFlows.0"/>
+        <viewElements xsi:type="dop-extension:ModifiedList" id="_TKA_DE_SM_TBL_lst" name="Table Akun With Membership">
+          <viewComponentParts xsi:type="dop-extension:ModifiedDataBinding" id="_TKA_DE_SM_TBL_lst_db" name="List Akun With Membership" uniformResourceIdentifier="call/akun-membership/list">
+            <subViewComponentParts xsi:type="dop-extension:AddedVisualizationAttribute" id="_TKA_DE_SM_TBL_lst_v" name="Membership Level">
+              <featureConcept href="#//@domainModel/@domainElements.1"/>
+            </subViewComponentParts>
+            <modifies href="akun-pengguna.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0/@viewComponentParts.0"/>
+          </viewComponentParts>
+          <modifies href="akun-pengguna.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0"/>
+        </viewElements>
+        <modifies href="akun-pengguna.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
+      </interactionFlowModelElement>
+      <interactionFlowModelElement xsi:type="dop-extension:ModifiedViewContainer" id="_TKA_DE_SM_ADD" name="Add Akun With Membership Page">
+        <viewElements xsi:type="dop-extension:ModifiedForm" id="_TKA_DE_SM_ADD_f" name="Add Akun With Membership">
+          <viewComponentParts xsi:type="dop-extension:AddedSimpleField" id="_TKA_DE_SM_ADD_f1" name="Membership Level">
+            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_DE_SM_ADD_f1s" name="membership_level"/>
+          </viewComponentParts>
+          <modifies href="akun-pengguna.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1/@viewElements.0"/>
+        </viewElements>
+        <modifies href="akun-pengguna.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1"/>
+      </interactionFlowModelElement>
+      <uses href="akun-pengguna.core#//@interactionFlowModel/@interactionFlowModelElements.0"/>
+    </interactionFlowModelElements>
+  </interactionFlowModel>
+  <domainModel id="_TKA_DE_SM_DM">
+    <domainElements xsi:type="core:UMLDomainConcept" id="_TKA_DE_SM_DM_0" name="AkunPenggunaImpl">
+      <classifier xsi:type="uml:Class" href="toko-online-anime.uml#_TOA_DE06_cls"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_DE_SM_DM_1" name="membership_level">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_DE06_a1"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLBehavioralFeature" id="_TKA_DE_SM_DM_2" name="checkMembership">
+      <behavioralFeature xsi:type="uml:Operation" href="toko-online-anime.uml#_TOA_DE06_op1"/>
+    </domainElements>
+  </domainModel>
+</core:IFMLModel>

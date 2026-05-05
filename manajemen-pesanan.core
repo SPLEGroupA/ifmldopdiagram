@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="ASCII"?>
+<core:IFMLModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://www.omg.org/spec/20130218/core" xmlns:ext="http://www.omg.org/spec/20130218/ext" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" id="_TKA_MP_0">
+  <interactionFlowModel id="_TKA_MP_1">
+    <interactionFlowModelElements xsi:type="core:ModuleDefinition" id="_TKA_MP_MOD" name="ManajemenPesanan">
+      <interactionFlowModelElement xsi:type="core:ViewContainer" id="_TKA_MP_TBL" name="Table Pesanan Page">
+        <annotations text="/pesanan"/>
+        <inInteractionFlows xsi:type="core:NavigationFlow" href="#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2/@actionEvents.0/@outInteractionFlows.0"/>
+        <inInteractionFlows xsi:type="core:NavigationFlow" href="main.core#//@interactionFlowModel/@interactionFlowModelElements.5/@viewElementEvents.0/@outInteractionFlows.0"/>
+        <viewElements xsi:type="ext:List" id="_TKA_MP_TBL_lst" name="Table Pesanan">
+          <viewElementEvents id="_TKA_MP_TBL_lst_det" name="Detail">
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_MP_TBL_lst_det_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1">
+              <parameterBindingGroup id="_TKA_MP_TBL_lst_det_bg">
+                <parameterBindings id="_TKA_MP_TBL_lst_det_pb" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0/@viewComponentParts.0/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1/@viewElements.0/@parameters.0"/>
+              </parameterBindingGroup>
+            </outInteractionFlows>
+          </viewElementEvents>
+          <viewElementEvents id="_TKA_MP_TBL_lst_upd" name="UpdateStatus">
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_MP_TBL_lst_upd_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.1">
+              <parameterBindingGroup id="_TKA_MP_TBL_lst_upd_bg">
+                <parameterBindings id="_TKA_MP_TBL_lst_upd_pb" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0/@viewComponentParts.0/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.1/@parameters.0"/>
+              </parameterBindingGroup>
+            </outInteractionFlows>
+          </viewElementEvents>
+          <viewComponentParts xsi:type="core:DataBinding" id="_TKA_MP_TBL_lst_db" name="List Pesanan" uniformResourceIdentifier="call/pesanan/list">
+            <parameters id="_TKA_MP_TBL_lst_db_p" name="id_pesanan" direction="out"/>
+            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_TKA_MP_TBL_lst_v1" name="Id Pesanan">
+              <featureConcept href="#//@domainModel/@domainElements.1"/>
+            </subViewComponentParts>
+            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_TKA_MP_TBL_lst_v2" name="Status">
+              <featureConcept href="#//@domainModel/@domainElements.2"/>
+            </subViewComponentParts>
+            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_TKA_MP_TBL_lst_v3" name="Tanggal Pesan">
+              <featureConcept href="#//@domainModel/@domainElements.3"/>
+            </subViewComponentParts>
+            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_TKA_MP_TBL_lst_v4" name="Total Harga">
+              <annotations text="isCurrency"/>
+              <featureConcept href="#//@domainModel/@domainElements.4"/>
+            </subViewComponentParts>
+          </viewComponentParts>
+        </viewElements>
+        <viewElements xsi:type="ext:IFMLWindow" id="_TKA_MP_TBL_uw" name="Update Status Pesanan" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0/@viewElementEvents.1/@outInteractionFlows.0" isModal="true">
+          <parameters id="_TKA_MP_TBL_uw_p" name="id_pesanan"/>
+          <viewElements xsi:type="ext:Form" id="_TKA_MP_TBL_uf" name="Update Status">
+            <parameters id="_TKA_MP_TBL_uf_p" name="id_pesanan" direction="inout"/>
+            <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_TKA_MP_TBL_uf_s" name="Submit">
+              <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_MP_TBL_uf_s_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2">
+                <parameterBindingGroup id="_TKA_MP_TBL_uf_s_bg">
+                  <parameterBindings id="_TKA_MP_TBL_uf_s_pb" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.1/@viewElements.0/@parameters.0"/>
+                </parameterBindingGroup>
+              </outInteractionFlows>
+            </viewElementEvents>
+            <viewComponentParts xsi:type="ext:SimpleField" id="_TKA_MP_TBL_uf_f1" name="Status">
+              <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_MP_TBL_uf_f1s" name="status"/>
+            </viewComponentParts>
+          </viewElements>
+        </viewElements>
+      </interactionFlowModelElement>
+      <interactionFlowModelElement xsi:type="core:ViewContainer" id="_TKA_MP_DET" name="Detail Pesanan Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+        <annotations text="/pesanan/:id_pesanan"/>
+        <viewElementEvents id="_TKA_MP_DET_back" name="Kembali">
+          <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_MP_DET_back_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
+        </viewElementEvents>
+        <viewElements xsi:type="ext:Details" id="_TKA_MP_DET_d" name="Detail Pesanan">
+          <parameters id="_TKA_MP_DET_d_p" name="id_pesanan"/>
+          <viewComponentParts xsi:type="core:DataBinding" id="_TKA_MP_DET_db" name="Detail Pesanan Data" uniformResourceIdentifier="call/pesanan/detail">
+            <parameters id="_TKA_MP_DET_db_p" name="id_pesanan" direction="out"/>
+            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_TKA_MP_DET_v1" name="Id Pesanan">
+              <featureConcept href="#//@domainModel/@domainElements.1"/>
+            </subViewComponentParts>
+            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_TKA_MP_DET_v2" name="Status">
+              <featureConcept href="#//@domainModel/@domainElements.2"/>
+            </subViewComponentParts>
+            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_TKA_MP_DET_v3" name="Tanggal Pesan">
+              <featureConcept href="#//@domainModel/@domainElements.3"/>
+            </subViewComponentParts>
+            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_TKA_MP_DET_v4" name="Total Harga">
+              <annotations text="isCurrency"/>
+              <featureConcept href="#//@domainModel/@domainElements.4"/>
+            </subViewComponentParts>
+          </viewComponentParts>
+        </viewElements>
+        <viewElements xsi:type="ext:List" id="_TKA_MP_DET_oi" name="Order Items">
+          <viewComponentParts xsi:type="core:DataBinding" id="_TKA_MP_DET_oi_db" name="List Order Items" uniformResourceIdentifier="call/order-item/list">
+            <parameters id="_TKA_MP_DET_oi_db_p" name="id_order_item" direction="out"/>
+            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_TKA_MP_DET_oi_v1" name="Id Order Item">
+              <featureConcept href="#//@domainModel/@domainElements.6"/>
+            </subViewComponentParts>
+            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_TKA_MP_DET_oi_v2" name="Quantity">
+              <featureConcept href="#//@domainModel/@domainElements.7"/>
+            </subViewComponentParts>
+            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_TKA_MP_DET_oi_v3" name="Harga Satuan">
+              <annotations text="isCurrency"/>
+              <featureConcept href="#//@domainModel/@domainElements.8"/>
+            </subViewComponentParts>
+          </viewComponentParts>
+        </viewElements>
+      </interactionFlowModelElement>
+      <interactionFlowModelElement xsi:type="core:IFMLAction" id="_TKA_MP_UPD" name="Update Status" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+        <annotations text="PUT"/>
+        <actionEvents id="_TKA_MP_UPD_ae" name="then">
+          <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_MP_UPD_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
+        </actionEvents>
+      </interactionFlowModelElement>
+    </interactionFlowModelElements>
+  </interactionFlowModel>
+  <domainModel id="_TKA_MP_DM">
+    <domainElements xsi:type="core:UMLDomainConcept" id="_TKA_MP_DM_0" name="OrderImpl">
+      <classifier xsi:type="uml:Class" href="toko-online-anime.uml#_TOA_M_PSN"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MP_DM_1" name="id_pesanan">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_PSN_a1"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MP_DM_2" name="status">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_PSN_a2"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MP_DM_3" name="tanggal_pesan">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_PSN_a3"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MP_DM_4" name="total_harga">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_PSN_a4"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLDomainConcept" id="_TKA_MP_DM_5" name="OrderItemImpl">
+      <classifier xsi:type="uml:Class" href="toko-online-anime.uml#_TOA_M_OI"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MP_DM_6" name="id_order_item">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_OI_a1"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MP_DM_7" name="quantity">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_OI_a2"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_MP_DM_8" name="harga_satuan">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_OI_a3"/>
+    </domainElements>
+  </domainModel>
+</core:IFMLModel>

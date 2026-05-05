@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="ASCII"?>
+<core:IFMLModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://www.omg.org/spec/20130218/core" xmlns:ext="http://www.omg.org/spec/20130218/ext" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" id="_TKA_AP_0">
+  <interactionFlowModel id="_TKA_AP_1">
+    <interactionFlowModelElements xsi:type="core:ModuleDefinition" id="_TKA_AP_MOD" name="AkunPengguna">
+      <interactionFlowModelElement xsi:type="core:ViewContainer" id="_TKA_AP_TBL" name="Table Akun Page">
+        <annotations text="/akun"/>
+        <inInteractionFlows xsi:type="core:NavigationFlow" href="#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2/@actionEvents.0/@outInteractionFlows.0"/>
+        <inInteractionFlows xsi:type="core:NavigationFlow" href="#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.3/@actionEvents.0/@outInteractionFlows.0"/>
+        <inInteractionFlows xsi:type="core:NavigationFlow" href="#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.4/@actionEvents.0/@outInteractionFlows.0"/>
+        <inInteractionFlows xsi:type="core:NavigationFlow" href="main.core#//@interactionFlowModel/@interactionFlowModelElements.3/@viewElementEvents.0/@outInteractionFlows.0"/>
+        <viewElementEvents id="_TKA_AP_TBL_add" name="Add Akun">
+          <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_AP_TBL_add_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1"/>
+        </viewElementEvents>
+        <viewElements xsi:type="ext:List" id="_TKA_AP_TBL_lst" name="Table Akun">
+          <viewElementEvents id="_TKA_AP_TBL_lst_upd" name="Update">
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_AP_TBL_lst_upd_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.1">
+              <parameterBindingGroup id="_TKA_AP_TBL_lst_upd_bg">
+                <parameterBindings id="_TKA_AP_TBL_lst_upd_pb" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0/@viewComponentParts.0/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.1/@parameters.0"/>
+              </parameterBindingGroup>
+            </outInteractionFlows>
+          </viewElementEvents>
+          <viewElementEvents id="_TKA_AP_TBL_lst_del" name="Delete">
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_AP_TBL_lst_del_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.2">
+              <parameterBindingGroup id="_TKA_AP_TBL_lst_del_bg">
+                <parameterBindings id="_TKA_AP_TBL_lst_del_pb" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0/@viewComponentParts.0/@parameters.0"/>
+              </parameterBindingGroup>
+            </outInteractionFlows>
+          </viewElementEvents>
+          <viewComponentParts xsi:type="core:DataBinding" id="_TKA_AP_TBL_lst_db" name="List Akun" uniformResourceIdentifier="call/akun/list">
+            <parameters id="_TKA_AP_TBL_lst_db_p" name="id_akun" direction="out"/>
+            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_TKA_AP_TBL_lst_v1" name="Id Akun">
+              <featureConcept href="#//@domainModel/@domainElements.1"/>
+            </subViewComponentParts>
+            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_TKA_AP_TBL_lst_v2" name="Email">
+              <featureConcept href="#//@domainModel/@domainElements.2"/>
+            </subViewComponentParts>
+            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_TKA_AP_TBL_lst_v3" name="Nama">
+              <featureConcept href="#//@domainModel/@domainElements.3"/>
+            </subViewComponentParts>
+            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_TKA_AP_TBL_lst_v4" name="Alamat">
+              <featureConcept href="#//@domainModel/@domainElements.4"/>
+            </subViewComponentParts>
+            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_TKA_AP_TBL_lst_v5" name="No Telepon">
+              <featureConcept href="#//@domainModel/@domainElements.5"/>
+            </subViewComponentParts>
+          </viewComponentParts>
+        </viewElements>
+        <viewElements xsi:type="ext:IFMLWindow" id="_TKA_AP_TBL_uw" name="Update Akun" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0" isModal="true">
+          <parameters id="_TKA_AP_TBL_uw_p" name="id_akun"/>
+          <viewElements xsi:type="ext:Form" id="_TKA_AP_TBL_uf" name="Update Akun">
+            <parameters id="_TKA_AP_TBL_uf_p" name="id_akun" direction="inout"/>
+            <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_TKA_AP_TBL_uf_s" name="Submit">
+              <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_AP_TBL_uf_s_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.3">
+                <parameterBindingGroup id="_TKA_AP_TBL_uf_s_bg">
+                  <parameterBindings id="_TKA_AP_TBL_uf_s_pb" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.1/@viewElements.0/@parameters.0"/>
+                </parameterBindingGroup>
+              </outInteractionFlows>
+            </viewElementEvents>
+            <viewComponentParts xsi:type="core:DataBinding" id="_TKA_AP_TBL_uf_db" name="AkunData" uniformResourceIdentifier="call/akun/detail">
+              <subViewComponentParts xsi:type="ext:SimpleField" id="_TKA_AP_TBL_uf_f1" name="Email">
+                <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_AP_TBL_uf_f1s" name="email"/>
+              </subViewComponentParts>
+              <subViewComponentParts xsi:type="ext:SimpleField" id="_TKA_AP_TBL_uf_f2" name="Nama">
+                <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_AP_TBL_uf_f2s" name="nama"/>
+              </subViewComponentParts>
+              <subViewComponentParts xsi:type="ext:SimpleField" id="_TKA_AP_TBL_uf_f3" name="Alamat">
+                <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_AP_TBL_uf_f3s" name="alamat"/>
+              </subViewComponentParts>
+              <subViewComponentParts xsi:type="ext:SimpleField" id="_TKA_AP_TBL_uf_f4" name="No Telepon">
+                <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_AP_TBL_uf_f4s" name="no_telepon"/>
+              </subViewComponentParts>
+            </viewComponentParts>
+          </viewElements>
+        </viewElements>
+        <viewElements xsi:type="ext:IFMLWindow" id="_TKA_AP_TBL_dw" name="Konfirmasi Hapus Akun" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0/@viewElementEvents.1/@outInteractionFlows.0" isModal="true">
+          <viewElementEvents id="_TKA_AP_TBL_dw_ev" name="Hapus">
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_AP_TBL_dw_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.4"/>
+          </viewElementEvents>
+        </viewElements>
+      </interactionFlowModelElement>
+      <interactionFlowModelElement xsi:type="core:ViewContainer" id="_TKA_AP_ADD" name="Add Akun Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElementEvents.0/@outInteractionFlows.0">
+        <annotations text="/akun/add"/>
+        <viewElements xsi:type="ext:Form" id="_TKA_AP_ADD_f" name="Add Akun">
+          <annotations text="ErrorModal"/>
+          <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_TKA_AP_ADD_s" name="Submit">
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_AP_ADD_s_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2"/>
+          </viewElementEvents>
+          <viewComponentParts xsi:type="ext:SimpleField" id="_TKA_AP_ADD_f1" name="Email">
+            <annotations text="Required"/>
+            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_AP_ADD_f1s" name="email"/>
+          </viewComponentParts>
+          <viewComponentParts xsi:type="ext:SimpleField" id="_TKA_AP_ADD_f2" name="Nama">
+            <annotations text="Required"/>
+            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_AP_ADD_f2s" name="nama"/>
+          </viewComponentParts>
+          <viewComponentParts xsi:type="ext:SimpleField" id="_TKA_AP_ADD_f3" name="Alamat">
+            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_AP_ADD_f3s" name="alamat"/>
+          </viewComponentParts>
+          <viewComponentParts xsi:type="ext:SimpleField" id="_TKA_AP_ADD_f4" name="No Telepon">
+            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_AP_ADD_f4s" name="no_telepon"/>
+          </viewComponentParts>
+        </viewElements>
+      </interactionFlowModelElement>
+      <interactionFlowModelElement xsi:type="core:IFMLAction" id="_TKA_AP_SAVE" name="Save Akun" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+        <annotations text="POST"/>
+        <actionEvents id="_TKA_AP_SAVE_ae" name="then">
+          <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_AP_SAVE_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
+        </actionEvents>
+      </interactionFlowModelElement>
+      <interactionFlowModelElement xsi:type="core:IFMLAction" id="_TKA_AP_UPD" name="Update Akun" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+        <annotations text="PUT"/>
+        <actionEvents id="_TKA_AP_UPD_ae" name="then">
+          <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_AP_UPD_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
+        </actionEvents>
+      </interactionFlowModelElement>
+      <interactionFlowModelElement xsi:type="core:IFMLAction" id="_TKA_AP_DEL" name="Delete Akun" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.2/@viewElementEvents.0/@outInteractionFlows.0">
+        <annotations text="DELETE"/>
+        <actionEvents id="_TKA_AP_DEL_ae" name="then">
+          <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_AP_DEL_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
+        </actionEvents>
+      </interactionFlowModelElement>
+    </interactionFlowModelElements>
+  </interactionFlowModel>
+  <domainModel id="_TKA_AP_DM">
+    <domainElements xsi:type="core:UMLDomainConcept" id="_TKA_AP_DM_0" name="AkunPenggunaImpl">
+      <classifier xsi:type="uml:Class" href="toko-online-anime.uml#_TOA_M_AKN"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_AP_DM_1" name="id_akun">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_AKN_a1"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_AP_DM_2" name="email">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_AKN_a2"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_AP_DM_3" name="nama">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_AKN_a3"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_AP_DM_4" name="alamat">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_AKN_a5"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_AP_DM_5" name="no_telepon">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_AKN_a6"/>
+    </domainElements>
+  </domainModel>
+</core:IFMLModel>

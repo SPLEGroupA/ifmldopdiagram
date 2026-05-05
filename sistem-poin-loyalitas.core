@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ASCII"?>
+<core:IFMLModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://www.omg.org/spec/20130218/core" xmlns:dop-extension="http://amanah.cs.ui.ac.id/ifml/dop" xmlns:ext="http://www.omg.org/spec/20130218/ext" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" id="_TKA_DE_SP_0">
+  <interactionFlowModel id="_TKA_DE_SP_1">
+    <interactionFlowModelElements xsi:type="dop-extension:DeltaModuleDefinition" id="_TKA_DE_SP_MOD" name="SistemPoinLoyalitas">
+      <interactionFlowModelElement xsi:type="dop-extension:ModifiedViewContainer" id="_TKA_DE_SP_TBL" name="Table Akun With Poin Page">
+        <annotations text="/akun-poin"/>
+        <inInteractionFlows xsi:type="core:NavigationFlow" href="main.core#//@interactionFlowModel/@interactionFlowModelElements.13/@viewElementEvents.0/@outInteractionFlows.0"/>
+        <inInteractionFlows xsi:type="dop-extension:ModifiedNavigationFlow" href="#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2/@actionEvents.0/@outInteractionFlows.0"/>
+        <viewElementEvents xsi:type="dop-extension:AddedViewElementEvent" id="_TKA_DE_SP_TBL_red" name="Redeem Poin">
+          <outInteractionFlows xsi:type="dop-extension:AddedNavigationFlow" id="_TKA_DE_SP_TBL_red_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1">
+            <parameterBindingGroup id="_TKA_DE_SP_TBL_red_bg">
+              <parameterBindings id="_TKA_DE_SP_TBL_red_pb" sourceParameter="akun-pengguna.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0/@viewComponentParts.0/@parameters.0"/>
+            </parameterBindingGroup>
+          </outInteractionFlows>
+        </viewElementEvents>
+        <viewElements xsi:type="dop-extension:ModifiedList" id="_TKA_DE_SP_TBL_lst" name="Table Akun With Poin">
+          <viewComponentParts xsi:type="dop-extension:ModifiedDataBinding" id="_TKA_DE_SP_TBL_lst_db" name="List Akun With Poin" uniformResourceIdentifier="call/akun-poin/list">
+            <subViewComponentParts xsi:type="dop-extension:AddedVisualizationAttribute" id="_TKA_DE_SP_TBL_lst_v" name="Poin">
+              <featureConcept href="#//@domainModel/@domainElements.1"/>
+            </subViewComponentParts>
+            <modifies href="akun-pengguna.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0/@viewComponentParts.0"/>
+          </viewComponentParts>
+          <modifies href="akun-pengguna.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0"/>
+        </viewElements>
+        <modifies href="akun-pengguna.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
+      </interactionFlowModelElement>
+      <interactionFlowModelElement xsi:type="dop-extension:ModifiedViewContainer" id="_TKA_DE_SP_RED" name="Redeem Poin Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElementEvents.0/@outInteractionFlows.0">
+        <annotations text="/akun-poin/redeem"/>
+        <viewElements xsi:type="dop-extension:AddedForm" id="_TKA_DE_SP_RED_f" name="Redeem Poin">
+          <parameters id="_TKA_DE_SP_RED_f_p" name="id_akun"/>
+          <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_TKA_DE_SP_RED_s" name="Submit">
+            <outInteractionFlows xsi:type="dop-extension:AddedNavigationFlow" id="_TKA_DE_SP_RED_s_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2"/>
+          </viewElementEvents>
+          <viewComponentParts xsi:type="dop-extension:AddedSimpleField" id="_TKA_DE_SP_RED_f1" name="Jumlah Poin">
+            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_DE_SP_RED_f1s" name="jumlah_poin"/>
+          </viewComponentParts>
+        </viewElements>
+      </interactionFlowModelElement>
+      <interactionFlowModelElement xsi:type="dop-extension:ModifiedAction" id="_TKA_DE_SP_ACT" name="Redeem Poin" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+        <annotations text="POST"/>
+        <actionEvents xsi:type="dop-extension:AddedActionEvent" id="_TKA_DE_SP_ACT_ae" name="then">
+          <outInteractionFlows xsi:type="dop-extension:AddedNavigationFlow" id="_TKA_DE_SP_ACT_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
+        </actionEvents>
+      </interactionFlowModelElement>
+      <uses href="akun-pengguna.core#//@interactionFlowModel/@interactionFlowModelElements.0"/>
+    </interactionFlowModelElements>
+  </interactionFlowModel>
+  <domainModel id="_TKA_DE_SP_DM">
+    <domainElements xsi:type="core:UMLDomainConcept" id="_TKA_DE_SP_DM_0" name="AkunPenggunaImpl">
+      <classifier xsi:type="uml:Class" href="toko-online-anime.uml#_TOA_DE07_cls"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_DE_SP_DM_1" name="poin">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_DE07_a1"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLBehavioralFeature" id="_TKA_DE_SP_DM_2" name="redeemPoin">
+      <behavioralFeature xsi:type="uml:Operation" href="toko-online-anime.uml#_TOA_DE07_op1"/>
+    </domainElements>
+  </domainModel>
+</core:IFMLModel>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ASCII"?>
+<core:IFMLModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://www.omg.org/spec/20130218/core" xmlns:dop-extension="http://amanah.cs.ui.ac.id/ifml/dop" xmlns:ext="http://www.omg.org/spec/20130218/ext" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" id="_TKA_DE_EW_0">
+  <interactionFlowModel id="_TKA_DE_EW_1">
+    <interactionFlowModelElements xsi:type="dop-extension:DeltaModuleDefinition" id="_TKA_DE_EW_MOD" name="PembayaranEWallet">
+      <interactionFlowModelElement xsi:type="dop-extension:ModifiedViewContainer" id="_TKA_DE_EW_TBL" name="Table Pembayaran EWallet Page">
+        <annotations text="/pembayaran-ewallet"/>
+        <inInteractionFlows xsi:type="core:NavigationFlow" href="main.core#//@interactionFlowModel/@interactionFlowModelElements.9/@viewElementEvents.0/@outInteractionFlows.0"/>
+        <viewElements xsi:type="dop-extension:ModifiedList" id="_TKA_DE_EW_TBL_lst" name="Table Pembayaran EWallet">
+          <viewComponentParts xsi:type="dop-extension:ModifiedDataBinding" id="_TKA_DE_EW_TBL_lst_db" name="List Pembayaran EWallet" uniformResourceIdentifier="call/pembayaran-ewallet/list">
+            <subViewComponentParts xsi:type="dop-extension:AddedVisualizationAttribute" id="_TKA_DE_EW_TBL_lst_v" name="EWallet Provider">
+              <featureConcept href="#//@domainModel/@domainElements.1"/>
+            </subViewComponentParts>
+            <modifies href="pembayaran.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0/@viewComponentParts.0"/>
+          </viewComponentParts>
+          <modifies href="pembayaran.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0"/>
+        </viewElements>
+        <modifies href="pembayaran.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
+      </interactionFlowModelElement>
+      <interactionFlowModelElement xsi:type="dop-extension:ModifiedViewContainer" id="_TKA_DE_EW_ADD" name="Add Pembayaran EWallet Page">
+        <viewElements xsi:type="dop-extension:ModifiedForm" id="_TKA_DE_EW_ADD_f" name="Add Pembayaran EWallet">
+          <viewComponentParts xsi:type="dop-extension:AddedSimpleField" id="_TKA_DE_EW_ADD_f1" name="EWallet Provider">
+            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_DE_EW_ADD_f1s" name="ewallet_provider"/>
+          </viewComponentParts>
+          <modifies href="pembayaran.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1/@viewElements.0"/>
+        </viewElements>
+        <modifies href="pembayaran.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1"/>
+      </interactionFlowModelElement>
+      <uses href="pembayaran.core#//@interactionFlowModel/@interactionFlowModelElements.0"/>
+    </interactionFlowModelElements>
+  </interactionFlowModel>
+  <domainModel id="_TKA_DE_EW_DM">
+    <domainElements xsi:type="core:UMLDomainConcept" id="_TKA_DE_EW_DM_0" name="PembayaranImpl">
+      <classifier xsi:type="uml:Class" href="toko-online-anime.uml#_TOA_DE03_cls"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_DE_EW_DM_1" name="ewallet_provider">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_DE03_a1"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLBehavioralFeature" id="_TKA_DE_EW_DM_2" name="payWithEWallet">
+      <behavioralFeature xsi:type="uml:Operation" href="toko-online-anime.uml#_TOA_DE03_op1"/>
+    </domainElements>
+  </domainModel>
+</core:IFMLModel>

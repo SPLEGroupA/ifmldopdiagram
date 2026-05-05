@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="ASCII"?>
+<core:IFMLModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://www.omg.org/spec/20130218/core" xmlns:ext="http://www.omg.org/spec/20130218/ext" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" id="_TKA_PO_0">
+  <interactionFlowModel id="_TKA_PO_1">
+    <interactionFlowModelElements xsi:type="core:ModuleDefinition" id="_TKA_PO_MOD" name="PreOrder">
+      <interactionFlowModelElement xsi:type="core:ViewContainer" id="_TKA_PO_TBL" name="Table PreOrder Page">
+        <annotations text="/preorder"/>
+        <inInteractionFlows xsi:type="core:NavigationFlow" href="#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2/@actionEvents.0/@outInteractionFlows.0"/>
+        <inInteractionFlows xsi:type="core:NavigationFlow" href="#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.3/@actionEvents.0/@outInteractionFlows.0"/>
+        <inInteractionFlows xsi:type="core:NavigationFlow" href="#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.4/@actionEvents.0/@outInteractionFlows.0"/>
+        <inInteractionFlows xsi:type="core:NavigationFlow" href="main.core#//@interactionFlowModel/@interactionFlowModelElements.6/@viewElementEvents.0/@outInteractionFlows.0"/>
+        <viewElementEvents id="_TKA_PO_TBL_add" name="Add PreOrder">
+          <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_PO_TBL_add_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1"/>
+        </viewElementEvents>
+        <viewElements xsi:type="ext:List" id="_TKA_PO_TBL_lst" name="Table PreOrder">
+          <viewElementEvents id="_TKA_PO_TBL_lst_upd" name="Update">
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_PO_TBL_lst_upd_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.1">
+              <parameterBindingGroup id="_TKA_PO_TBL_lst_upd_bg">
+                <parameterBindings id="_TKA_PO_TBL_lst_upd_pb" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0/@viewComponentParts.0/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.1/@parameters.0"/>
+              </parameterBindingGroup>
+            </outInteractionFlows>
+          </viewElementEvents>
+          <viewElementEvents id="_TKA_PO_TBL_lst_del" name="Delete">
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_PO_TBL_lst_del_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.2">
+              <parameterBindingGroup id="_TKA_PO_TBL_lst_del_bg">
+                <parameterBindings id="_TKA_PO_TBL_lst_del_pb" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0/@viewComponentParts.0/@parameters.0"/>
+              </parameterBindingGroup>
+            </outInteractionFlows>
+          </viewElementEvents>
+          <viewComponentParts xsi:type="core:DataBinding" id="_TKA_PO_TBL_lst_db" name="List PreOrder" uniformResourceIdentifier="call/preorder/list">
+            <parameters id="_TKA_PO_TBL_lst_db_p" name="id_preorder" direction="out"/>
+            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_TKA_PO_TBL_lst_v1" name="Id PreOrder">
+              <featureConcept href="#//@domainModel/@domainElements.1"/>
+            </subViewComponentParts>
+            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_TKA_PO_TBL_lst_v2" name="Tanggal Rilis">
+              <featureConcept href="#//@domainModel/@domainElements.2"/>
+            </subViewComponentParts>
+            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_TKA_PO_TBL_lst_v3" name="Status">
+              <featureConcept href="#//@domainModel/@domainElements.3"/>
+            </subViewComponentParts>
+          </viewComponentParts>
+        </viewElements>
+        <viewElements xsi:type="ext:IFMLWindow" id="_TKA_PO_TBL_uw" name="Update PreOrder" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0" isModal="true">
+          <parameters id="_TKA_PO_TBL_uw_p" name="id_preorder"/>
+          <viewElements xsi:type="ext:Form" id="_TKA_PO_TBL_uf" name="Update PreOrder">
+            <parameters id="_TKA_PO_TBL_uf_p" name="id_preorder" direction="inout"/>
+            <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_TKA_PO_TBL_uf_s" name="Submit">
+              <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_PO_TBL_uf_s_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.3">
+                <parameterBindingGroup id="_TKA_PO_TBL_uf_s_bg">
+                  <parameterBindings id="_TKA_PO_TBL_uf_s_pb" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.1/@viewElements.0/@parameters.0"/>
+                </parameterBindingGroup>
+              </outInteractionFlows>
+            </viewElementEvents>
+            <viewComponentParts xsi:type="ext:SimpleField" id="_TKA_PO_TBL_uf_f1" name="Tanggal Rilis">
+              <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_PO_TBL_uf_f1s" name="tanggal_rilis"/>
+            </viewComponentParts>
+            <viewComponentParts xsi:type="ext:SimpleField" id="_TKA_PO_TBL_uf_f2" name="Status">
+              <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_PO_TBL_uf_f2s" name="status"/>
+            </viewComponentParts>
+          </viewElements>
+        </viewElements>
+        <viewElements xsi:type="ext:IFMLWindow" id="_TKA_PO_TBL_dw" name="Konfirmasi Hapus PreOrder" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0/@viewElementEvents.1/@outInteractionFlows.0" isModal="true">
+          <viewElementEvents id="_TKA_PO_TBL_dw_ev" name="Hapus">
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_PO_TBL_dw_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.4"/>
+          </viewElementEvents>
+        </viewElements>
+      </interactionFlowModelElement>
+      <interactionFlowModelElement xsi:type="core:ViewContainer" id="_TKA_PO_ADD" name="Add PreOrder Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElementEvents.0/@outInteractionFlows.0">
+        <annotations text="/preorder/add"/>
+        <viewElements xsi:type="ext:Form" id="_TKA_PO_ADD_f" name="Add PreOrder">
+          <annotations text="ErrorModal"/>
+          <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_TKA_PO_ADD_s" name="Submit">
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_PO_ADD_s_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2"/>
+          </viewElementEvents>
+          <viewComponentParts xsi:type="core:DataBinding" id="_TKA_PO_ADD_db" name="ProdukOptions" uniformResourceIdentifier="call/produk/select-options">
+            <subViewComponentParts xsi:type="ext:SelectionField" id="_TKA_PO_ADD_sf" name="Produk">
+              <annotations text="Required"/>
+              <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_PO_ADD_sf_n" name="nama"/>
+              <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_PO_ADD_sf_id" name="id_produk" direction="out"/>
+            </subViewComponentParts>
+          </viewComponentParts>
+          <viewComponentParts xsi:type="ext:SimpleField" id="_TKA_PO_ADD_f1" name="Tanggal Rilis">
+            <annotations text="Required"/>
+            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_PO_ADD_f1s" name="tanggal_rilis"/>
+          </viewComponentParts>
+        </viewElements>
+      </interactionFlowModelElement>
+      <interactionFlowModelElement xsi:type="core:IFMLAction" id="_TKA_PO_SAVE" name="Save PreOrder" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+        <annotations text="POST"/>
+        <actionEvents id="_TKA_PO_SAVE_ae" name="then">
+          <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_PO_SAVE_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
+        </actionEvents>
+      </interactionFlowModelElement>
+      <interactionFlowModelElement xsi:type="core:IFMLAction" id="_TKA_PO_UPD" name="Update PreOrder" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+        <annotations text="PUT"/>
+        <actionEvents id="_TKA_PO_UPD_ae" name="then">
+          <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_PO_UPD_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
+        </actionEvents>
+      </interactionFlowModelElement>
+      <interactionFlowModelElement xsi:type="core:IFMLAction" id="_TKA_PO_DEL" name="Delete PreOrder" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.2/@viewElementEvents.0/@outInteractionFlows.0">
+        <annotations text="DELETE"/>
+        <actionEvents id="_TKA_PO_DEL_ae" name="then">
+          <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_PO_DEL_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
+        </actionEvents>
+      </interactionFlowModelElement>
+    </interactionFlowModelElements>
+  </interactionFlowModel>
+  <domainModel id="_TKA_PO_DM">
+    <domainElements xsi:type="core:UMLDomainConcept" id="_TKA_PO_DM_0" name="PreOrderImpl">
+      <classifier xsi:type="uml:Class" href="toko-online-anime.uml#_TOA_M_PO"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_PO_DM_1" name="id_preorder">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_PO_a1"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_PO_DM_2" name="tanggal_rilis">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_PO_a2"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_TKA_PO_DM_3" name="status">
+      <structuralFeature xsi:type="uml:Property" href="toko-online-anime.uml#_TOA_M_PO_a3"/>
+    </domainElements>
+  </domainModel>
+</core:IFMLModel>
