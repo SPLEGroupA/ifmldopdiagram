@@ -46,7 +46,7 @@
               <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_MP_TBL_uf_s_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2">
 
                 <parameterBindingGroup id="_TKA_MP_TBL_uf_s_bg">
-                  <parameterBindings id="_TKA_MP_TBL_uf_s_pb" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.1/@viewElements.0/@parameters.0"/>
+                  <parameterBindings id="_TKA_MP_TBL_uf_s_pb" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.1/@viewElements.0/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2/@parameters.0"/>
                 </parameterBindingGroup>
               </outInteractionFlows>
             </viewElementEvents>
@@ -103,6 +103,7 @@
       </interactionFlowModelElement>
       <interactionFlowModelElement xsi:type="core:IFMLAction" id="_TKA_MP_UPD" name="Update ManajemenPesanan" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
         <annotations text="PUT"/>
+        <parameters id="_TKA_MP_UPD_p" name="id_pesanan"/>
         <actionEvents id="_TKA_MP_UPD_ae" name="then">
           <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_MP_UPD_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
         </actionEvents>

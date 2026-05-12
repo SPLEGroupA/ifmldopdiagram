@@ -9,7 +9,7 @@
         <viewElementEvents xsi:type="dop-extension:AddedViewElementEvent" id="_TKA_DE_RR_TBL_rev" name="Add Review">
           <outInteractionFlows xsi:type="dop-extension:AddedNavigationFlow" id="_TKA_DE_RR_TBL_rev_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1">
             <parameterBindingGroup id="_TKA_DE_RR_TBL_rev_bg">
-              <parameterBindings id="_TKA_DE_RR_TBL_rev_pb" sourceParameter="katalog-produk.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0/@viewComponentParts.0/@parameters.0"/>
+              <parameterBindings id="_TKA_DE_RR_TBL_rev_pb" sourceParameter="katalog-produk.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0/@viewComponentParts.0/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1/@viewElements.0/@parameters.0"/>
             </parameterBindingGroup>
           </outInteractionFlows>
         </viewElementEvents>
@@ -29,7 +29,11 @@
         <viewElements xsi:type="dop-extension:AddedForm" id="_TKA_DE_RR_ADD_f" name="Add Review">
           <parameters id="_TKA_DE_RR_ADD_f_p" name="id_produk"/>
           <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_TKA_DE_RR_ADD_s" name="Submit">
-            <outInteractionFlows xsi:type="dop-extension:AddedNavigationFlow" id="_TKA_DE_RR_ADD_s_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2"/>
+            <outInteractionFlows xsi:type="dop-extension:AddedNavigationFlow" id="_TKA_DE_RR_ADD_s_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2">
+              <parameterBindingGroup id="_TKA_DE_RR_ADD_s_bg">
+                <parameterBindings id="_TKA_DE_RR_ADD_s_pb" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1/@viewElements.0/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2/@parameters.0"/>
+              </parameterBindingGroup>
+            </outInteractionFlows>
           </viewElementEvents>
           <viewComponentParts xsi:type="dop-extension:AddedSimpleField" id="_TKA_DE_RR_ADD_f1" name="Rating">
             <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_DE_RR_ADD_f1s" name="rating"/>
@@ -41,6 +45,7 @@
       </interactionFlowModelElement>
       <interactionFlowModelElement xsi:type="dop-extension:AddedAction" id="_TKA_DE_RR_ACT" name="Save ReviewDanRating" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
         <annotations text="POST"/>
+        <parameters id="_TKA_DE_RR_ACT_p" name="id_produk"/>
         <actionEvents xsi:type="dop-extension:AddedActionEvent" id="_TKA_DE_RR_ACT_ae" name="then">
           <outInteractionFlows xsi:type="dop-extension:AddedNavigationFlow" id="_TKA_DE_RR_ACT_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
         </actionEvents>

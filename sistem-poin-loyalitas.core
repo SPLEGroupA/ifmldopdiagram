@@ -29,7 +29,11 @@
         <viewElements xsi:type="dop-extension:AddedForm" id="_TKA_DE_SP_RED_f" name="Redeem Poin">
           <parameters id="_TKA_DE_SP_RED_f_p" name="id_akun"/>
           <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_TKA_DE_SP_RED_s" name="Submit">
-            <outInteractionFlows xsi:type="dop-extension:AddedNavigationFlow" id="_TKA_DE_SP_RED_s_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2"/>
+            <outInteractionFlows xsi:type="dop-extension:AddedNavigationFlow" id="_TKA_DE_SP_RED_s_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2">
+              <parameterBindingGroup id="_TKA_DE_SP_RED_s_bg">
+                <parameterBindings id="_TKA_DE_SP_RED_s_pb" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1/@viewElements.0/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2/@parameters.0"/>
+              </parameterBindingGroup>
+            </outInteractionFlows>
           </viewElementEvents>
           <viewComponentParts xsi:type="dop-extension:AddedSimpleField" id="_TKA_DE_SP_RED_f1" name="Jumlah Poin">
             <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_DE_SP_RED_f1s" name="jumlah_poin"/>
@@ -38,6 +42,7 @@
       </interactionFlowModelElement>
       <interactionFlowModelElement xsi:type="dop-extension:AddedAction" id="_TKA_DE_SP_ACT" name="Save SistemPoinLoyalitas" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
         <annotations text="POST"/>
+        <parameters id="_TKA_DE_SP_ACT_p" name="id_akun"/>
         <actionEvents xsi:type="dop-extension:AddedActionEvent" id="_TKA_DE_SP_ACT_ae" name="then">
           <outInteractionFlows xsi:type="dop-extension:AddedNavigationFlow" id="_TKA_DE_SP_ACT_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
         </actionEvents>

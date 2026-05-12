@@ -14,7 +14,7 @@
           <viewElementEvents id="_TKA_PY_TBL_lst_det" name="Detail">
             <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_PY_TBL_lst_det_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.3">
               <parameterBindingGroup id="_TKA_PY_TBL_lst_det_bg">
-                <parameterBindings id="_TKA_PY_TBL_lst_det_pb" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0/@viewComponentParts.0/@parameters.0"/>
+                <parameterBindings id="_TKA_PY_TBL_lst_det_pb" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0/@viewComponentParts.0/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.3/@viewElements.0/@parameters.0"/>
               </parameterBindingGroup>
             </outInteractionFlows>
           </viewElementEvents>

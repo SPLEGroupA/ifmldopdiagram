@@ -14,7 +14,7 @@
           <viewElementEvents xsi:type="dop-extension:AddedViewElementEvent" id="_TKA_DE_WL_TBL_lst_del" name="Remove">
             <outInteractionFlows xsi:type="dop-extension:AddedNavigationFlow" id="_TKA_DE_WL_TBL_lst_del_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.3">
               <parameterBindingGroup id="_TKA_DE_WL_TBL_lst_del_bg">
-                <parameterBindings id="_TKA_DE_WL_TBL_lst_del_pb" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0/@viewComponentParts.0/@parameters.0"/>
+                <parameterBindings id="_TKA_DE_WL_TBL_lst_del_pb" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0/@viewComponentParts.0/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.3/@parameters.0"/>
               </parameterBindingGroup>
             </outInteractionFlows>
           </viewElementEvents>
@@ -52,6 +52,7 @@
       </interactionFlowModelElement>
       <interactionFlowModelElement xsi:type="dop-extension:AddedAction" id="_TKA_DE_WL_REMACT" name="Delete Wishlist" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
         <annotations text="DELETE"/>
+        <parameters id="_TKA_DE_WL_REMACT_p" name="id_produk"/>
         <actionEvents xsi:type="dop-extension:AddedActionEvent" id="_TKA_DE_WL_REMACT_ae" name="then">
           <outInteractionFlows xsi:type="dop-extension:AddedNavigationFlow" id="_TKA_DE_WL_REMACT_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
         </actionEvents>

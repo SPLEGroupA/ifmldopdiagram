@@ -22,7 +22,7 @@
           <viewElementEvents id="_TKA_AP_TBL_lst_del" name="Delete">
             <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_AP_TBL_lst_del_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.2">
               <parameterBindingGroup id="_TKA_AP_TBL_lst_del_bg">
-                <parameterBindings id="_TKA_AP_TBL_lst_del_pb" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0/@viewComponentParts.0/@parameters.0"/>
+                <parameterBindings id="_TKA_AP_TBL_lst_del_pb" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0/@viewComponentParts.0/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.2/@parameters.0"/>
               </parameterBindingGroup>
             </outInteractionFlows>
           </viewElementEvents>
@@ -52,7 +52,7 @@
             <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_TKA_AP_TBL_uf_s" name="Submit">
               <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_AP_TBL_uf_s_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.3">
                 <parameterBindingGroup id="_TKA_AP_TBL_uf_s_bg">
-                  <parameterBindings id="_TKA_AP_TBL_uf_s_pb" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.1/@viewElements.0/@parameters.0"/>
+                  <parameterBindings id="_TKA_AP_TBL_uf_s_pb" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.1/@viewElements.0/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.3/@parameters.0"/>
                 </parameterBindingGroup>
               </outInteractionFlows>
             </viewElementEvents>
@@ -73,8 +73,13 @@
           </viewElements>
         </viewElements>
         <viewElements xsi:type="ext:IFMLWindow" id="_TKA_AP_TBL_dw" name="Konfirmasi Hapus Akun" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0/@viewElementEvents.1/@outInteractionFlows.0" isModal="true">
+          <parameters id="_TKA_AP_TBL_dw_p" name="id_akun"/>
           <viewElementEvents id="_TKA_AP_TBL_dw_ev" name="Hapus">
-            <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_AP_TBL_dw_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.4"/>
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_AP_TBL_dw_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.4">
+              <parameterBindingGroup id="_TKA_AP_TBL_dw_bg">
+                <parameterBindings id="_TKA_AP_TBL_dw_pb" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.2/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.4/@parameters.0"/>
+              </parameterBindingGroup>
+            </outInteractionFlows>
           </viewElementEvents>
         </viewElements>
       </interactionFlowModelElement>
@@ -109,12 +114,14 @@
       </interactionFlowModelElement>
       <interactionFlowModelElement xsi:type="core:IFMLAction" id="_TKA_AP_UPD" name="Update AkunPengguna" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
         <annotations text="PUT"/>
+        <parameters id="_TKA_AP_UPD_p" name="id_akun"/>
         <actionEvents id="_TKA_AP_UPD_ae" name="then">
           <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_AP_UPD_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
         </actionEvents>
       </interactionFlowModelElement>
       <interactionFlowModelElement xsi:type="core:IFMLAction" id="_TKA_AP_DEL" name="Delete AkunPengguna" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.2/@viewElementEvents.0/@outInteractionFlows.0">
         <annotations text="DELETE"/>
+        <parameters id="_TKA_AP_DEL_p" name="id_akun"/>
         <actionEvents id="_TKA_AP_DEL_ae" name="then">
           <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_AP_DEL_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
         </actionEvents>
