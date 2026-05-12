@@ -3,10 +3,17 @@
   <interactionFlowModel id="_TKA_DE_PO_1">
     <interactionFlowModelElements xsi:type="dop-extension:DeltaModuleDefinition" id="_TKA_DE_PO_MOD" name="KatalogProdukPreOwned">
       <interactionFlowModelElement xsi:type="dop-extension:ModifiedViewContainer" id="_TKA_DE_PO_TBL" name="Table Produk PreOwned Page">
-        <annotations text="/produk-pre-owned"/>
+        <annotations text="/katalogprodukpreowned"/>
         <inInteractionFlows xsi:type="core:NavigationFlow" href="main.core#//@interactionFlowModel/@interactionFlowModelElements.8/@viewElementEvents.0/@outInteractionFlows.0"/>
+        <inInteractionFlows xsi:type="dop-extension:AddedNavigationFlow" href="#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2/@actionEvents.0/@outInteractionFlows.0"/>
+        <viewElementEvents xsi:type="dop-extension:ModifiedViewElementEvent" id="_TKA_DE_PO_TBL_add" name="Add Produk PreOwned">
+          <outInteractionFlows xsi:type="dop-extension:ModifiedNavigationFlow" id="_TKA_DE_PO_TBL_add_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1">
+            <modifies href="katalog-produk.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElementEvents.0/@outInteractionFlows.0"/>
+          </outInteractionFlows>
+          <modifies href="katalog-produk.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElementEvents.0"/>
+        </viewElementEvents>
         <viewElements xsi:type="dop-extension:ModifiedList" id="_TKA_DE_PO_TBL_lst" name="Table Produk PreOwned">
-          <viewComponentParts xsi:type="dop-extension:ModifiedDataBinding" id="_TKA_DE_PO_TBL_lst_db" name="List Produk PreOwned" uniformResourceIdentifier="call/produk-pre-owned/list">
+          <viewComponentParts xsi:type="dop-extension:ModifiedDataBinding" id="_TKA_DE_PO_TBL_lst_db" name="List Produk PreOwned" uniformResourceIdentifier="call/katalogprodukpreowned/list">
             <subViewComponentParts xsi:type="dop-extension:AddedVisualizationAttribute" id="_TKA_DE_PO_TBL_lst_v" name="Kondisi">
               <featureConcept href="#//@domainModel/@domainElements.1"/>
             </subViewComponentParts>
@@ -17,13 +24,24 @@
         <modifies href="katalog-produk.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
       </interactionFlowModelElement>
       <interactionFlowModelElement xsi:type="dop-extension:ModifiedViewContainer" id="_TKA_DE_PO_ADD" name="Add Produk PreOwned Page">
+        <annotations text="/katalogprodukpreowned/add"/>
         <viewElements xsi:type="dop-extension:ModifiedForm" id="_TKA_DE_PO_ADD_f" name="Add Produk PreOwned">
+          <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_TKA_DE_PO_ADD_s" name="Submit">
+            <outInteractionFlows xsi:type="dop-extension:AddedNavigationFlow" id="_TKA_DE_PO_ADD_s_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2"/>
+          </viewElementEvents>
           <viewComponentParts xsi:type="dop-extension:AddedSimpleField" id="_TKA_DE_PO_ADD_f1" name="Kondisi">
             <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_DE_PO_ADD_f1s" name="kondisi"/>
           </viewComponentParts>
           <modifies href="katalog-produk.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1/@viewElements.0"/>
         </viewElements>
         <modifies href="katalog-produk.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1"/>
+      </interactionFlowModelElement>
+      <interactionFlowModelElement xsi:type="dop-extension:ModifiedAction" id="_TKA_DE_PO_SAVE" name="Save KatalogProdukPreOwned" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+        <annotations text="POST"/>
+        <actionEvents xsi:type="dop-extension:AddedActionEvent" id="_TKA_DE_PO_SAVE_ae" name="AddedActionEvent">
+          <outInteractionFlows xsi:type="dop-extension:AddedNavigationFlow" id="_TKA_DE_PO_SAVE_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
+        </actionEvents>
+        <modifies href="katalog-produk.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2"/>
       </interactionFlowModelElement>
       <uses href="katalog-produk.core#//@interactionFlowModel/@interactionFlowModelElements.0"/>
     </interactionFlowModelElements>

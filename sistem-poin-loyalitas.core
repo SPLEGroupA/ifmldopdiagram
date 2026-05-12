@@ -3,18 +3,18 @@
   <interactionFlowModel id="_TKA_DE_SP_1">
     <interactionFlowModelElements xsi:type="dop-extension:DeltaModuleDefinition" id="_TKA_DE_SP_MOD" name="SistemPoinLoyalitas">
       <interactionFlowModelElement xsi:type="dop-extension:ModifiedViewContainer" id="_TKA_DE_SP_TBL" name="Table Akun With Poin Page">
-        <annotations text="/akun-poin"/>
+        <annotations text="/sistempoinloyalitas"/>
         <inInteractionFlows xsi:type="core:NavigationFlow" href="main.core#//@interactionFlowModel/@interactionFlowModelElements.13/@viewElementEvents.0/@outInteractionFlows.0"/>
         <inInteractionFlows xsi:type="dop-extension:ModifiedNavigationFlow" href="#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2/@actionEvents.0/@outInteractionFlows.0"/>
         <viewElementEvents xsi:type="dop-extension:AddedViewElementEvent" id="_TKA_DE_SP_TBL_red" name="Redeem Poin">
           <outInteractionFlows xsi:type="dop-extension:AddedNavigationFlow" id="_TKA_DE_SP_TBL_red_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1">
             <parameterBindingGroup id="_TKA_DE_SP_TBL_red_bg">
-              <parameterBindings id="_TKA_DE_SP_TBL_red_pb" sourceParameter="akun-pengguna.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0/@viewComponentParts.0/@parameters.0"/>
+              <parameterBindings id="_TKA_DE_SP_TBL_red_pb" sourceParameter="akun-pengguna.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0/@viewComponentParts.0/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1/@viewElements.0/@parameters.0"/>
             </parameterBindingGroup>
           </outInteractionFlows>
         </viewElementEvents>
         <viewElements xsi:type="dop-extension:ModifiedList" id="_TKA_DE_SP_TBL_lst" name="Table Akun With Poin">
-          <viewComponentParts xsi:type="dop-extension:ModifiedDataBinding" id="_TKA_DE_SP_TBL_lst_db" name="List Akun With Poin" uniformResourceIdentifier="call/akun-poin/list">
+          <viewComponentParts xsi:type="dop-extension:ModifiedDataBinding" id="_TKA_DE_SP_TBL_lst_db" name="List Akun With Poin" uniformResourceIdentifier="call/akunpengguna/list">
             <subViewComponentParts xsi:type="dop-extension:AddedVisualizationAttribute" id="_TKA_DE_SP_TBL_lst_v" name="Poin">
               <featureConcept href="#//@domainModel/@domainElements.1"/>
             </subViewComponentParts>
@@ -25,7 +25,7 @@
         <modifies href="akun-pengguna.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
       </interactionFlowModelElement>
       <interactionFlowModelElement xsi:type="dop-extension:ModifiedViewContainer" id="_TKA_DE_SP_RED" name="Redeem Poin Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElementEvents.0/@outInteractionFlows.0">
-        <annotations text="/akun-poin/redeem"/>
+        <annotations text="/sistempoinloyalitas/redeem"/>
         <viewElements xsi:type="dop-extension:AddedForm" id="_TKA_DE_SP_RED_f" name="Redeem Poin">
           <parameters id="_TKA_DE_SP_RED_f_p" name="id_akun"/>
           <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_TKA_DE_SP_RED_s" name="Submit">
@@ -36,7 +36,7 @@
           </viewComponentParts>
         </viewElements>
       </interactionFlowModelElement>
-      <interactionFlowModelElement xsi:type="dop-extension:ModifiedAction" id="_TKA_DE_SP_ACT" name="Redeem Poin" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+      <interactionFlowModelElement xsi:type="dop-extension:AddedAction" id="_TKA_DE_SP_ACT" name="Save SistemPoinLoyalitas" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
         <annotations text="POST"/>
         <actionEvents xsi:type="dop-extension:AddedActionEvent" id="_TKA_DE_SP_ACT_ae" name="then">
           <outInteractionFlows xsi:type="dop-extension:AddedNavigationFlow" id="_TKA_DE_SP_ACT_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>

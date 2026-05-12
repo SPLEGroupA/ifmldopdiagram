@@ -3,7 +3,7 @@
   <interactionFlowModel id="_TKA_DE_RR_1">
     <interactionFlowModelElements xsi:type="dop-extension:DeltaModuleDefinition" id="_TKA_DE_RR_MOD" name="ReviewRating">
       <interactionFlowModelElement xsi:type="dop-extension:ModifiedViewContainer" id="_TKA_DE_RR_TBL" name="Table Produk With Rating Page">
-        <annotations text="/produk-rating"/>
+        <annotations text="/katalogproduk-rating"/>
         <inInteractionFlows xsi:type="core:NavigationFlow" href="main.core#//@interactionFlowModel/@interactionFlowModelElements.11/@viewElementEvents.0/@outInteractionFlows.0"/>
         <inInteractionFlows xsi:type="dop-extension:ModifiedNavigationFlow" href="#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2/@actionEvents.0/@outInteractionFlows.0"/>
         <viewElementEvents xsi:type="dop-extension:AddedViewElementEvent" id="_TKA_DE_RR_TBL_rev" name="Add Review">
@@ -14,7 +14,7 @@
           </outInteractionFlows>
         </viewElementEvents>
         <viewElements xsi:type="dop-extension:ModifiedList" id="_TKA_DE_RR_TBL_lst" name="Table Produk With Rating">
-          <viewComponentParts xsi:type="dop-extension:ModifiedDataBinding" id="_TKA_DE_RR_TBL_lst_db" name="List Produk With Rating" uniformResourceIdentifier="call/produk-rating/list">
+          <viewComponentParts xsi:type="dop-extension:ModifiedDataBinding" id="_TKA_DE_RR_TBL_lst_db" name="List Produk With Rating" uniformResourceIdentifier="call/katalogproduk/list">
             <subViewComponentParts xsi:type="dop-extension:AddedVisualizationAttribute" id="_TKA_DE_RR_TBL_lst_v" name="Average Rating">
               <featureConcept href="#//@domainModel/@domainElements.1"/>
             </subViewComponentParts>
@@ -25,7 +25,7 @@
         <modifies href="katalog-produk.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
       </interactionFlowModelElement>
       <interactionFlowModelElement xsi:type="dop-extension:ModifiedViewContainer" id="_TKA_DE_RR_ADD" name="Add Review Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElementEvents.0/@outInteractionFlows.0">
-        <annotations text="/produk-rating/review"/>
+        <annotations text="/katalogproduk-rating/review"/>
         <viewElements xsi:type="dop-extension:AddedForm" id="_TKA_DE_RR_ADD_f" name="Add Review">
           <parameters id="_TKA_DE_RR_ADD_f_p" name="id_produk"/>
           <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_TKA_DE_RR_ADD_s" name="Submit">
@@ -39,7 +39,7 @@
           </viewComponentParts>
         </viewElements>
       </interactionFlowModelElement>
-      <interactionFlowModelElement xsi:type="dop-extension:ModifiedAction" id="_TKA_DE_RR_ACT" name="Add Review" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+      <interactionFlowModelElement xsi:type="dop-extension:AddedAction" id="_TKA_DE_RR_ACT" name="Save ReviewDanRating" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
         <annotations text="POST"/>
         <actionEvents xsi:type="dop-extension:AddedActionEvent" id="_TKA_DE_RR_ACT_ae" name="then">
           <outInteractionFlows xsi:type="dop-extension:AddedNavigationFlow" id="_TKA_DE_RR_ACT_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>

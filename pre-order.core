@@ -56,6 +56,14 @@
             <viewComponentParts xsi:type="ext:SimpleField" id="_TKA_PO_TBL_uf_f2" name="Status">
               <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_PO_TBL_uf_f2s" name="status"/>
             </viewComponentParts>
+            <viewComponentParts xsi:type="core:DataBinding" id="_TKA_PO_TBL_uf_db" name="PreOrderData" uniformResourceIdentifier="call/preorder/detail">
+              <subViewComponentParts xsi:type="ext:SimpleField" id="_TKA_PO_TBL_uf_db_f1" name="Tanggal Rilis">
+                <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_PO_TBL_uf_db_f1s" name="tanggal_rilis"/>
+              </subViewComponentParts>
+              <subViewComponentParts xsi:type="ext:SimpleField" id="_TKA_PO_TBL_uf_db_f2" name="Status">
+                <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_PO_TBL_uf_db_f2s" name="status"/>
+              </subViewComponentParts>
+            </viewComponentParts>
           </viewElements>
         </viewElements>
         <viewElements xsi:type="ext:IFMLWindow" id="_TKA_PO_TBL_dw" name="Konfirmasi Hapus PreOrder" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0/@viewElementEvents.1/@outInteractionFlows.0" isModal="true">
@@ -71,7 +79,7 @@
           <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_TKA_PO_ADD_s" name="Submit">
             <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_PO_ADD_s_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2"/>
           </viewElementEvents>
-          <viewComponentParts xsi:type="core:DataBinding" id="_TKA_PO_ADD_db" name="ProdukOptions" uniformResourceIdentifier="call/produk/select-options">
+          <viewComponentParts xsi:type="core:DataBinding" id="_TKA_PO_ADD_db" name="ProdukOptions" uniformResourceIdentifier="call/katalogproduk/select-options">
             <subViewComponentParts xsi:type="ext:SelectionField" id="_TKA_PO_ADD_sf" name="Produk">
               <annotations text="Required"/>
               <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_PO_ADD_sf_n" name="nama"/>

@@ -5,8 +5,15 @@
       <interactionFlowModelElement xsi:type="dop-extension:ModifiedViewContainer" id="_TKA_DE_EW_TBL" name="Table Pembayaran EWallet Page">
         <annotations text="/pembayaran-ewallet"/>
         <inInteractionFlows xsi:type="core:NavigationFlow" href="main.core#//@interactionFlowModel/@interactionFlowModelElements.9/@viewElementEvents.0/@outInteractionFlows.0"/>
+        <inInteractionFlows xsi:type="dop-extension:AddedNavigationFlow" href="#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2/@actionEvents.0/@outInteractionFlows.0"/>
+        <viewElementEvents xsi:type="dop-extension:ModifiedViewElementEvent" id="_TKA_DE_EW_TBL_add" name="Add Pembayaran EWallet">
+          <outInteractionFlows xsi:type="dop-extension:ModifiedNavigationFlow" id="_TKA_DE_EW_TBL_add_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1">
+            <modifies href="pembayaran.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElementEvents.0/@outInteractionFlows.0"/>
+          </outInteractionFlows>
+          <modifies href="pembayaran.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElementEvents.0"/>
+        </viewElementEvents>
         <viewElements xsi:type="dop-extension:ModifiedList" id="_TKA_DE_EW_TBL_lst" name="Table Pembayaran EWallet">
-          <viewComponentParts xsi:type="dop-extension:ModifiedDataBinding" id="_TKA_DE_EW_TBL_lst_db" name="List Pembayaran EWallet" uniformResourceIdentifier="call/pembayaran-ewallet/list">
+          <viewComponentParts xsi:type="dop-extension:ModifiedDataBinding" id="_TKA_DE_EW_TBL_lst_db" name="List Pembayaran EWallet" uniformResourceIdentifier="call/pembayaranewallet/list">
             <subViewComponentParts xsi:type="dop-extension:AddedVisualizationAttribute" id="_TKA_DE_EW_TBL_lst_v" name="EWallet Provider">
               <featureConcept href="#//@domainModel/@domainElements.1"/>
             </subViewComponentParts>
@@ -16,14 +23,25 @@
         </viewElements>
         <modifies href="pembayaran.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
       </interactionFlowModelElement>
-      <interactionFlowModelElement xsi:type="dop-extension:ModifiedViewContainer" id="_TKA_DE_EW_ADD" name="Add Pembayaran EWallet Page">
+      <interactionFlowModelElement xsi:type="dop-extension:ModifiedViewContainer" id="_TKA_DE_EW_ADD" name="Add Pembayaran EWallet Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElementEvents.0/@outInteractionFlows.0">
+        <annotations text="/pembayaran-ewallet/add"/>
         <viewElements xsi:type="dop-extension:ModifiedForm" id="_TKA_DE_EW_ADD_f" name="Add Pembayaran EWallet">
+          <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_TKA_DE_EW_ADD_s" name="Submit">
+            <outInteractionFlows xsi:type="dop-extension:AddedNavigationFlow" id="_TKA_DE_EW_ADD_s_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2"/>
+          </viewElementEvents>
           <viewComponentParts xsi:type="dop-extension:AddedSimpleField" id="_TKA_DE_EW_ADD_f1" name="EWallet Provider">
             <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_DE_EW_ADD_f1s" name="ewallet_provider"/>
           </viewComponentParts>
           <modifies href="pembayaran.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1/@viewElements.0"/>
         </viewElements>
         <modifies href="pembayaran.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1"/>
+      </interactionFlowModelElement>
+      <interactionFlowModelElement xsi:type="dop-extension:ModifiedAction" id="_TKA_DE_EW_SAVE" name="Save PembayaranEWallet" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+        <annotations text="POST"/>
+        <actionEvents xsi:type="dop-extension:AddedActionEvent" id="_TKA_DE_EW_SAVE_ae" name="AddedActionEvent">
+          <outInteractionFlows xsi:type="dop-extension:AddedNavigationFlow" id="_TKA_DE_EW_SAVE_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
+        </actionEvents>
+        <modifies href="pembayaran.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2"/>
       </interactionFlowModelElement>
       <uses href="pembayaran.core#//@interactionFlowModel/@interactionFlowModelElements.0"/>
     </interactionFlowModelElements>

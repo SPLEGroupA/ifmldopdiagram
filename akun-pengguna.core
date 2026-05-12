@@ -3,7 +3,7 @@
   <interactionFlowModel id="_TKA_AP_1">
     <interactionFlowModelElements xsi:type="core:ModuleDefinition" id="_TKA_AP_MOD" name="AkunPengguna">
       <interactionFlowModelElement xsi:type="core:ViewContainer" id="_TKA_AP_TBL" name="Table Akun Page">
-        <annotations text="/akun"/>
+        <annotations text="/akunpengguna"/>
         <inInteractionFlows xsi:type="core:NavigationFlow" href="#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2/@actionEvents.0/@outInteractionFlows.0"/>
         <inInteractionFlows xsi:type="core:NavigationFlow" href="#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.3/@actionEvents.0/@outInteractionFlows.0"/>
         <inInteractionFlows xsi:type="core:NavigationFlow" href="#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.4/@actionEvents.0/@outInteractionFlows.0"/>
@@ -26,7 +26,7 @@
               </parameterBindingGroup>
             </outInteractionFlows>
           </viewElementEvents>
-          <viewComponentParts xsi:type="core:DataBinding" id="_TKA_AP_TBL_lst_db" name="List Akun" uniformResourceIdentifier="call/akun/list">
+          <viewComponentParts xsi:type="core:DataBinding" id="_TKA_AP_TBL_lst_db" name="List Akun" uniformResourceIdentifier="call/akunpengguna/list">
             <parameters id="_TKA_AP_TBL_lst_db_p" name="id_akun" direction="out"/>
             <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_TKA_AP_TBL_lst_v1" name="Id Akun">
               <featureConcept href="#//@domainModel/@domainElements.1"/>
@@ -56,7 +56,7 @@
                 </parameterBindingGroup>
               </outInteractionFlows>
             </viewElementEvents>
-            <viewComponentParts xsi:type="core:DataBinding" id="_TKA_AP_TBL_uf_db" name="AkunData" uniformResourceIdentifier="call/akun/detail">
+            <viewComponentParts xsi:type="core:DataBinding" id="_TKA_AP_TBL_uf_db" name="AkunData" uniformResourceIdentifier="call/akunpengguna/detail">
               <subViewComponentParts xsi:type="ext:SimpleField" id="_TKA_AP_TBL_uf_f1" name="Email">
                 <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_AP_TBL_uf_f1s" name="email"/>
               </subViewComponentParts>
@@ -79,7 +79,7 @@
         </viewElements>
       </interactionFlowModelElement>
       <interactionFlowModelElement xsi:type="core:ViewContainer" id="_TKA_AP_ADD" name="Add Akun Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElementEvents.0/@outInteractionFlows.0">
-        <annotations text="/akun/add"/>
+        <annotations text="/akunpengguna/add"/>
         <viewElements xsi:type="ext:Form" id="_TKA_AP_ADD_f" name="Add Akun">
           <annotations text="ErrorModal"/>
           <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_TKA_AP_ADD_s" name="Submit">
@@ -101,19 +101,19 @@
           </viewComponentParts>
         </viewElements>
       </interactionFlowModelElement>
-      <interactionFlowModelElement xsi:type="core:IFMLAction" id="_TKA_AP_SAVE" name="Save Akun" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+      <interactionFlowModelElement xsi:type="core:IFMLAction" id="_TKA_AP_SAVE" name="Save AkunPengguna" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
         <annotations text="POST"/>
         <actionEvents id="_TKA_AP_SAVE_ae" name="then">
           <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_AP_SAVE_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
         </actionEvents>
       </interactionFlowModelElement>
-      <interactionFlowModelElement xsi:type="core:IFMLAction" id="_TKA_AP_UPD" name="Update Akun" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+      <interactionFlowModelElement xsi:type="core:IFMLAction" id="_TKA_AP_UPD" name="Update AkunPengguna" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
         <annotations text="PUT"/>
         <actionEvents id="_TKA_AP_UPD_ae" name="then">
           <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_AP_UPD_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
         </actionEvents>
       </interactionFlowModelElement>
-      <interactionFlowModelElement xsi:type="core:IFMLAction" id="_TKA_AP_DEL" name="Delete Akun" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.2/@viewElementEvents.0/@outInteractionFlows.0">
+      <interactionFlowModelElement xsi:type="core:IFMLAction" id="_TKA_AP_DEL" name="Delete AkunPengguna" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.2/@viewElementEvents.0/@outInteractionFlows.0">
         <annotations text="DELETE"/>
         <actionEvents id="_TKA_AP_DEL_ae" name="then">
           <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_AP_DEL_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>

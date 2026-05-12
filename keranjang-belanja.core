@@ -3,7 +3,7 @@
   <interactionFlowModel id="_TKA_KB_1">
     <interactionFlowModelElements xsi:type="core:ModuleDefinition" id="_TKA_KB_MOD" name="KeranjangBelanja">
       <interactionFlowModelElement xsi:type="core:ViewContainer" id="_TKA_KB_TBL" name="Keranjang Page">
-        <annotations text="/keranjang"/>
+        <annotations text="/keranjangbelanja"/>
         <inInteractionFlows xsi:type="core:NavigationFlow" href="#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2/@actionEvents.0/@outInteractionFlows.0"/>
         <inInteractionFlows xsi:type="core:NavigationFlow" href="#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.3/@actionEvents.0/@outInteractionFlows.0"/>
         <inInteractionFlows xsi:type="core:NavigationFlow" href="main.core#//@interactionFlowModel/@interactionFlowModelElements.2/@viewElementEvents.0/@outInteractionFlows.0"/>
@@ -14,14 +14,14 @@
           <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_KB_TBL_co_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.4"/>
         </viewElementEvents>
         <viewElements xsi:type="ext:List" id="_TKA_KB_TBL_lst" name="Table CartItem">
-          <viewElementEvents id="_TKA_KB_TBL_lst_del" name="Delete">
+          <viewElementEvents id="_TKA_KB_TBL_lst_del" name="Hapus">
             <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_KB_TBL_lst_del_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.3">
               <parameterBindingGroup id="_TKA_KB_TBL_lst_del_bg">
                 <parameterBindings id="_TKA_KB_TBL_lst_del_pb" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0/@viewComponentParts.0/@parameters.0"/>
               </parameterBindingGroup>
             </outInteractionFlows>
           </viewElementEvents>
-          <viewComponentParts xsi:type="core:DataBinding" id="_TKA_KB_TBL_lst_db" name="List CartItem" uniformResourceIdentifier="call/keranjang/list">
+          <viewComponentParts xsi:type="core:DataBinding" id="_TKA_KB_TBL_lst_db" name="List CartItem" uniformResourceIdentifier="call/keranjangbelanja/list">
             <parameters id="_TKA_KB_TBL_lst_db_p" name="id_cart_item" direction="out"/>
             <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_TKA_KB_TBL_lst_v1" name="Id Cart Item">
               <featureConcept href="#//@domainModel/@domainElements.3"/>
@@ -37,13 +37,13 @@
         </viewElements>
       </interactionFlowModelElement>
       <interactionFlowModelElement xsi:type="core:ViewContainer" id="_TKA_KB_ADD" name="Add Item Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElementEvents.0/@outInteractionFlows.0">
-        <annotations text="/keranjang/add"/>
+        <annotations text="/keranjangbelanja/add"/>
         <viewElements xsi:type="ext:Form" id="_TKA_KB_ADD_f" name="Add CartItem">
           <annotations text="ErrorModal"/>
           <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_TKA_KB_ADD_s" name="Submit">
             <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_KB_ADD_s_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2"/>
           </viewElementEvents>
-          <viewComponentParts xsi:type="core:DataBinding" id="_TKA_KB_ADD_db" name="ProdukOptions" uniformResourceIdentifier="call/produk/select-options">
+          <viewComponentParts xsi:type="core:DataBinding" id="_TKA_KB_ADD_db" name="ProdukOptions" uniformResourceIdentifier="call/katalogproduk/select-options">
             <subViewComponentParts xsi:type="ext:SelectionField" id="_TKA_KB_ADD_sf" name="Produk">
               <annotations text="Required"/>
               <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_KB_ADD_sf_n" name="nama"/>
@@ -68,7 +68,7 @@
           <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_KB_DEL_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
         </actionEvents>
       </interactionFlowModelElement>
-      <interactionFlowModelElement xsi:type="core:IFMLAction" id="_TKA_KB_CO" name="Checkout" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElementEvents.1/@outInteractionFlows.0">
+      <interactionFlowModelElement xsi:type="core:IFMLAction" id="_TKA_KB_CO" name="Save ManajemenPesanan" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElementEvents.1/@outInteractionFlows.0">
         <annotations text="POST"/>
         <actionEvents id="_TKA_KB_CO_ae" name="then">
           <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_KB_CO_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>

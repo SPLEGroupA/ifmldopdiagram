@@ -3,10 +3,17 @@
   <interactionFlowModel id="_TKA_DE_SM_1">
     <interactionFlowModelElements xsi:type="dop-extension:DeltaModuleDefinition" id="_TKA_DE_SM_MOD" name="SistemMembership">
       <interactionFlowModelElement xsi:type="dop-extension:ModifiedViewContainer" id="_TKA_DE_SM_TBL" name="Table Akun With Membership Page">
-        <annotations text="/akun-membership"/>
+        <annotations text="/sistemmembership"/>
         <inInteractionFlows xsi:type="core:NavigationFlow" href="main.core#//@interactionFlowModel/@interactionFlowModelElements.12/@viewElementEvents.0/@outInteractionFlows.0"/>
+        <inInteractionFlows xsi:type="dop-extension:AddedNavigationFlow" href="#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2/@actionEvents.0/@outInteractionFlows.0"/>
+        <viewElementEvents xsi:type="dop-extension:ModifiedViewElementEvent" id="_TKA_DE_SM_TBL_add" name="Add Akun With Membership">
+          <outInteractionFlows xsi:type="dop-extension:ModifiedNavigationFlow" id="_TKA_DE_SM_TBL_add_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1">
+            <modifies href="akun-pengguna.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElementEvents.0/@outInteractionFlows.0"/>
+          </outInteractionFlows>
+          <modifies href="akun-pengguna.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElementEvents.0"/>
+        </viewElementEvents>
         <viewElements xsi:type="dop-extension:ModifiedList" id="_TKA_DE_SM_TBL_lst" name="Table Akun With Membership">
-          <viewComponentParts xsi:type="dop-extension:ModifiedDataBinding" id="_TKA_DE_SM_TBL_lst_db" name="List Akun With Membership" uniformResourceIdentifier="call/akun-membership/list">
+          <viewComponentParts xsi:type="dop-extension:ModifiedDataBinding" id="_TKA_DE_SM_TBL_lst_db" name="List Akun With Membership" uniformResourceIdentifier="call/sistemmembership/list">
             <subViewComponentParts xsi:type="dop-extension:AddedVisualizationAttribute" id="_TKA_DE_SM_TBL_lst_v" name="Membership Level">
               <featureConcept href="#//@domainModel/@domainElements.1"/>
             </subViewComponentParts>
@@ -16,14 +23,25 @@
         </viewElements>
         <modifies href="akun-pengguna.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
       </interactionFlowModelElement>
-      <interactionFlowModelElement xsi:type="dop-extension:ModifiedViewContainer" id="_TKA_DE_SM_ADD" name="Add Akun With Membership Page">
+      <interactionFlowModelElement xsi:type="dop-extension:ModifiedViewContainer" id="_TKA_DE_SM_ADD" name="Add Akun With Membership Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElementEvents.0/@outInteractionFlows.0">
+        <annotations text="/sistemmembership/add"/>
         <viewElements xsi:type="dop-extension:ModifiedForm" id="_TKA_DE_SM_ADD_f" name="Add Akun With Membership">
+          <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_TKA_DE_SM_ADD_s" name="Submit">
+            <outInteractionFlows xsi:type="dop-extension:AddedNavigationFlow" id="_TKA_DE_SM_ADD_s_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2"/>
+          </viewElementEvents>
           <viewComponentParts xsi:type="dop-extension:AddedSimpleField" id="_TKA_DE_SM_ADD_f1" name="Membership Level">
             <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_DE_SM_ADD_f1s" name="membership_level"/>
           </viewComponentParts>
           <modifies href="akun-pengguna.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1/@viewElements.0"/>
         </viewElements>
         <modifies href="akun-pengguna.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1"/>
+      </interactionFlowModelElement>
+      <interactionFlowModelElement xsi:type="dop-extension:ModifiedAction" id="_TKA_DE_SM_SAVE" name="Save SistemMembership" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+        <annotations text="POST"/>
+        <actionEvents xsi:type="dop-extension:AddedActionEvent" id="_TKA_DE_SM_SAVE_ae" name="AddedActionEvent">
+          <outInteractionFlows xsi:type="dop-extension:AddedNavigationFlow" id="_TKA_DE_SM_SAVE_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
+        </actionEvents>
+        <modifies href="akun-pengguna.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2"/>
       </interactionFlowModelElement>
       <uses href="akun-pengguna.core#//@interactionFlowModel/@interactionFlowModelElements.0"/>
     </interactionFlowModelElements>

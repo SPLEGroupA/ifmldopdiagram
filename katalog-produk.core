@@ -3,7 +3,7 @@
   <interactionFlowModel id="_TKA_KP_1">
     <interactionFlowModelElements xsi:type="core:ModuleDefinition" id="_TKA_KP_MOD" name="KatalogProduk">
       <interactionFlowModelElement xsi:type="core:ViewContainer" id="_TKA_KP_TBL" name="Table Produk Page">
-        <annotations text="/produk"/>
+        <annotations text="/katalogproduk"/>
         <inInteractionFlows xsi:type="core:NavigationFlow" href="#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2/@actionEvents.0/@outInteractionFlows.0"/>
         <inInteractionFlows xsi:type="core:NavigationFlow" href="#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.3/@actionEvents.0/@outInteractionFlows.0"/>
         <inInteractionFlows xsi:type="core:NavigationFlow" href="#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.4/@actionEvents.0/@outInteractionFlows.0"/>
@@ -26,7 +26,7 @@
               </parameterBindingGroup>
             </outInteractionFlows>
           </viewElementEvents>
-          <viewComponentParts xsi:type="core:DataBinding" id="_TKA_KP_TBL_lst_db" name="List Produk" uniformResourceIdentifier="call/produk/list">
+          <viewComponentParts xsi:type="core:DataBinding" id="_TKA_KP_TBL_lst_db" name="List Produk" uniformResourceIdentifier="call/katalogproduk/list">
             <parameters id="_TKA_KP_TBL_lst_db_p" name="id_produk" direction="out"/>
             <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_TKA_KP_TBL_lst_v1" name="Id Produk">
               <featureConcept href="#//@domainModel/@domainElements.1"/>
@@ -57,7 +57,7 @@
                 </parameterBindingGroup>
               </outInteractionFlows>
             </viewElementEvents>
-            <viewComponentParts xsi:type="core:DataBinding" id="_TKA_KP_TBL_uf_db" name="ProdukData" uniformResourceIdentifier="call/produk/detail">
+            <viewComponentParts xsi:type="core:DataBinding" id="_TKA_KP_TBL_uf_db" name="ProdukData" uniformResourceIdentifier="call/katalogproduk/detail">
               <subViewComponentParts xsi:type="ext:SimpleField" id="_TKA_KP_TBL_uf_f1" name="Nama">
                 <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_KP_TBL_uf_f1s" name="nama"/>
               </subViewComponentParts>
@@ -86,7 +86,7 @@
         </viewElements>
       </interactionFlowModelElement>
       <interactionFlowModelElement xsi:type="core:ViewContainer" id="_TKA_KP_ADD" name="Add Produk Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElementEvents.0/@outInteractionFlows.0">
-        <annotations text="/produk/add"/>
+        <annotations text="/katalogproduk/add"/>
         <viewElements xsi:type="ext:Form" id="_TKA_KP_ADD_f" name="Add Produk">
           <annotations text="ErrorModal"/>
           <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_TKA_KP_ADD_s" name="Submit">
@@ -114,19 +114,19 @@
           </viewComponentParts>
         </viewElements>
       </interactionFlowModelElement>
-      <interactionFlowModelElement xsi:type="core:IFMLAction" id="_TKA_KP_SAVE" name="Save Produk" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+      <interactionFlowModelElement xsi:type="core:IFMLAction" id="_TKA_KP_SAVE" name="Save KatalogProduk" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
         <annotations text="POST"/>
         <actionEvents id="_TKA_KP_SAVE_ae" name="then">
           <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_KP_SAVE_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
         </actionEvents>
       </interactionFlowModelElement>
-      <interactionFlowModelElement xsi:type="core:IFMLAction" id="_TKA_KP_UPD" name="Update Produk" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+      <interactionFlowModelElement xsi:type="core:IFMLAction" id="_TKA_KP_UPD" name="Update KatalogProduk" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
         <annotations text="PUT"/>
         <actionEvents id="_TKA_KP_UPD_ae" name="then">
           <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_KP_UPD_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
         </actionEvents>
       </interactionFlowModelElement>
-      <interactionFlowModelElement xsi:type="core:IFMLAction" id="_TKA_KP_DEL" name="Delete Produk" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.2/@viewElementEvents.0/@outInteractionFlows.0">
+      <interactionFlowModelElement xsi:type="core:IFMLAction" id="_TKA_KP_DEL" name="Delete KatalogProduk" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.2/@viewElementEvents.0/@outInteractionFlows.0">
         <annotations text="DELETE"/>
         <actionEvents id="_TKA_KP_DEL_ae" name="then">
           <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_KP_DEL_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>

@@ -51,7 +51,7 @@
             <annotations text="Required"/>
             <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_PY_ADD_f2s" name="jumlah"/>
           </viewComponentParts>
-          <viewComponentParts xsi:type="core:DataBinding" id="_TKA_PY_ADD_db" name="PesananOptions" uniformResourceIdentifier="call/pesanan/select-options">
+          <viewComponentParts xsi:type="core:DataBinding" id="_TKA_PY_ADD_db" name="PesananOptions" uniformResourceIdentifier="call/manajemenpesanan/select-options">
             <subViewComponentParts xsi:type="ext:SelectionField" id="_TKA_PY_ADD_sf" name="Pesanan">
               <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_PY_ADD_sf_id" name="id_pesanan" direction="out"/>
             </subViewComponentParts>

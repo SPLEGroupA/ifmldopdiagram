@@ -2,11 +2,11 @@
 <core:IFMLModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://www.omg.org/spec/20130218/core" xmlns:dop-extension="http://amanah.cs.ui.ac.id/ifml/dop" xmlns:ext="http://www.omg.org/spec/20130218/ext" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" id="_TKA_DE_WL_0">
   <interactionFlowModel id="_TKA_DE_WL_1">
     <interactionFlowModelElements xsi:type="dop-extension:DeltaModuleDefinition" id="_TKA_DE_WL_MOD" name="Wishlist">
-      <interactionFlowModelElement xsi:type="dop-extension:ModifiedViewContainer" id="_TKA_DE_WL_TBL" name="Wishlist Page">
+      <interactionFlowModelElement xsi:type="dop-extension:AddedViewContainer" id="_TKA_DE_WL_TBL" name="Wishlist Page">
         <annotations text="/wishlist"/>
         <inInteractionFlows xsi:type="core:NavigationFlow" href="main.core#//@interactionFlowModel/@interactionFlowModelElements.10/@viewElementEvents.0/@outInteractionFlows.0"/>
-        <inInteractionFlows xsi:type="dop-extension:ModifiedNavigationFlow" href="#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2/@actionEvents.0/@outInteractionFlows.0"/>
-        <inInteractionFlows xsi:type="dop-extension:ModifiedNavigationFlow" href="#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.3/@actionEvents.0/@outInteractionFlows.0"/>
+        <inInteractionFlows xsi:type="dop-extension:AddedNavigationFlow" href="#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2/@actionEvents.0/@outInteractionFlows.0"/>
+        <inInteractionFlows xsi:type="dop-extension:AddedNavigationFlow" href="#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.3/@actionEvents.0/@outInteractionFlows.0"/>
         <viewElementEvents xsi:type="dop-extension:AddedViewElementEvent" id="_TKA_DE_WL_TBL_add" name="Add Wishlist">
           <outInteractionFlows xsi:type="dop-extension:AddedNavigationFlow" id="_TKA_DE_WL_TBL_add_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1"/>
         </viewElementEvents>
@@ -29,15 +29,14 @@
             </subViewComponentParts>
           </viewComponentParts>
         </viewElements>
-        <modifies href="akun-pengguna.core#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
       </interactionFlowModelElement>
-      <interactionFlowModelElement xsi:type="dop-extension:ModifiedViewContainer" id="_TKA_DE_WL_ADD" name="Add Wishlist Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElementEvents.0/@outInteractionFlows.0">
+      <interactionFlowModelElement xsi:type="dop-extension:AddedViewContainer" id="_TKA_DE_WL_ADD" name="Add Wishlist Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElementEvents.0/@outInteractionFlows.0">
         <annotations text="/wishlist/add"/>
         <viewElements xsi:type="dop-extension:AddedForm" id="_TKA_DE_WL_ADD_f" name="Add Wishlist">
           <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_TKA_DE_WL_ADD_s" name="Submit">
             <outInteractionFlows xsi:type="dop-extension:AddedNavigationFlow" id="_TKA_DE_WL_ADD_s_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2"/>
           </viewElementEvents>
-          <viewComponentParts xsi:type="dop-extension:AddedDataBinding" id="_TKA_DE_WL_ADD_db" name="ProdukOptions" uniformResourceIdentifier="call/produk/select-options">
+          <viewComponentParts xsi:type="dop-extension:AddedDataBinding" id="_TKA_DE_WL_ADD_db" name="ProdukOptions" uniformResourceIdentifier="call/katalogproduk/select-options">
             <subViewComponentParts xsi:type="dop-extension:AddedSelectionField" id="_TKA_DE_WL_ADD_sf" name="Produk">
               <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_DE_WL_ADD_sf_n" name="nama"/>
               <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_DE_WL_ADD_sf_id" name="id_produk" direction="out"/>
@@ -45,13 +44,13 @@
           </viewComponentParts>
         </viewElements>
       </interactionFlowModelElement>
-      <interactionFlowModelElement xsi:type="dop-extension:ModifiedAction" id="_TKA_DE_WL_ADDACT" name="Add To Wishlist" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+      <interactionFlowModelElement xsi:type="dop-extension:AddedAction" id="_TKA_DE_WL_ADDACT" name="Save Wishlist" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
         <annotations text="POST"/>
         <actionEvents xsi:type="dop-extension:AddedActionEvent" id="_TKA_DE_WL_ADDACT_ae" name="then">
           <outInteractionFlows xsi:type="dop-extension:AddedNavigationFlow" id="_TKA_DE_WL_ADDACT_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
         </actionEvents>
       </interactionFlowModelElement>
-      <interactionFlowModelElement xsi:type="dop-extension:ModifiedAction" id="_TKA_DE_WL_REMACT" name="Remove From Wishlist" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+      <interactionFlowModelElement xsi:type="dop-extension:AddedAction" id="_TKA_DE_WL_REMACT" name="Delete Wishlist" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
         <annotations text="DELETE"/>
         <actionEvents xsi:type="dop-extension:AddedActionEvent" id="_TKA_DE_WL_REMACT_ae" name="then">
           <outInteractionFlows xsi:type="dop-extension:AddedNavigationFlow" id="_TKA_DE_WL_REMACT_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>

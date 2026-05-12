@@ -3,7 +3,7 @@
   <interactionFlowModel id="_TKA_MP_1">
     <interactionFlowModelElements xsi:type="core:ModuleDefinition" id="_TKA_MP_MOD" name="ManajemenPesanan">
       <interactionFlowModelElement xsi:type="core:ViewContainer" id="_TKA_MP_TBL" name="Table Pesanan Page">
-        <annotations text="/pesanan"/>
+        <annotations text="/manajemenpesanan"/>
         <inInteractionFlows xsi:type="core:NavigationFlow" href="#//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2/@actionEvents.0/@outInteractionFlows.0"/>
         <inInteractionFlows xsi:type="core:NavigationFlow" href="main.core#//@interactionFlowModel/@interactionFlowModelElements.5/@viewElementEvents.0/@outInteractionFlows.0"/>
         <viewElements xsi:type="ext:List" id="_TKA_MP_TBL_lst" name="Table Pesanan">
@@ -21,7 +21,7 @@
               </parameterBindingGroup>
             </outInteractionFlows>
           </viewElementEvents>
-          <viewComponentParts xsi:type="core:DataBinding" id="_TKA_MP_TBL_lst_db" name="List Pesanan" uniformResourceIdentifier="call/pesanan/list">
+          <viewComponentParts xsi:type="core:DataBinding" id="_TKA_MP_TBL_lst_db" name="List Pesanan" uniformResourceIdentifier="call/manajemenpesanan/list">
             <parameters id="_TKA_MP_TBL_lst_db_p" name="id_pesanan" direction="out"/>
             <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_TKA_MP_TBL_lst_v1" name="Id Pesanan">
               <featureConcept href="#//@domainModel/@domainElements.1"/>
@@ -44,6 +44,7 @@
             <parameters id="_TKA_MP_TBL_uf_p" name="id_pesanan" direction="inout"/>
             <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_TKA_MP_TBL_uf_s" name="Submit">
               <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_MP_TBL_uf_s_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.2">
+
                 <parameterBindingGroup id="_TKA_MP_TBL_uf_s_bg">
                   <parameterBindings id="_TKA_MP_TBL_uf_s_pb" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.1/@viewElements.0/@parameters.0"/>
                 </parameterBindingGroup>
@@ -52,17 +53,22 @@
             <viewComponentParts xsi:type="ext:SimpleField" id="_TKA_MP_TBL_uf_f1" name="Status">
               <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_MP_TBL_uf_f1s" name="status"/>
             </viewComponentParts>
+            <viewComponentParts xsi:type="core:DataBinding" id="_TKA_MP_TBL_uf_db" name="PesananData" uniformResourceIdentifier="call/manajemenpesanan/detail">
+              <subViewComponentParts xsi:type="ext:SimpleField" id="_TKA_MP_TBL_uf_db_f1" name="Status">
+                <subViewComponentParts xsi:type="ext:IFMLSlot" id="_TKA_MP_TBL_uf_db_f1s" name="status"/>
+              </subViewComponentParts>
+            </viewComponentParts>
           </viewElements>
         </viewElements>
       </interactionFlowModelElement>
       <interactionFlowModelElement xsi:type="core:ViewContainer" id="_TKA_MP_DET" name="Detail Pesanan Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
-        <annotations text="/pesanan/:id_pesanan"/>
+        <annotations text="/manajemenpesanan/:id_pesanan"/>
         <viewElementEvents id="_TKA_MP_DET_back" name="Kembali">
           <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_MP_DET_back_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
         </viewElementEvents>
         <viewElements xsi:type="ext:Details" id="_TKA_MP_DET_d" name="Detail Pesanan">
           <parameters id="_TKA_MP_DET_d_p" name="id_pesanan"/>
-          <viewComponentParts xsi:type="core:DataBinding" id="_TKA_MP_DET_db" name="Detail Pesanan Data" uniformResourceIdentifier="call/pesanan/detail">
+          <viewComponentParts xsi:type="core:DataBinding" id="_TKA_MP_DET_db" name="Detail Pesanan Data" uniformResourceIdentifier="call/manajemenpesanan/detail">
             <parameters id="_TKA_MP_DET_db_p" name="id_pesanan" direction="out"/>
             <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_TKA_MP_DET_v1" name="Id Pesanan">
               <featureConcept href="#//@domainModel/@domainElements.1"/>
@@ -80,7 +86,7 @@
           </viewComponentParts>
         </viewElements>
         <viewElements xsi:type="ext:List" id="_TKA_MP_DET_oi" name="Order Items">
-          <viewComponentParts xsi:type="core:DataBinding" id="_TKA_MP_DET_oi_db" name="List Order Items" uniformResourceIdentifier="call/order-item/list">
+          <viewComponentParts xsi:type="core:DataBinding" id="_TKA_MP_DET_oi_db" name="List Order Items" uniformResourceIdentifier="call/orderitem/list">
             <parameters id="_TKA_MP_DET_oi_db_p" name="id_order_item" direction="out"/>
             <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_TKA_MP_DET_oi_v1" name="Id Order Item">
               <featureConcept href="#//@domainModel/@domainElements.6"/>
@@ -95,7 +101,7 @@
           </viewComponentParts>
         </viewElements>
       </interactionFlowModelElement>
-      <interactionFlowModelElement xsi:type="core:IFMLAction" id="_TKA_MP_UPD" name="Update Status" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+      <interactionFlowModelElement xsi:type="core:IFMLAction" id="_TKA_MP_UPD" name="Update ManajemenPesanan" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0/@viewElements.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
         <annotations text="PUT"/>
         <actionEvents id="_TKA_MP_UPD_ae" name="then">
           <outInteractionFlows xsi:type="core:NavigationFlow" id="_TKA_MP_UPD_nf" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@interactionFlowModelElement.0"/>
